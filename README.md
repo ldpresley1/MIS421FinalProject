@@ -15,13 +15,13 @@ Project is due midnight of the day of our alloted final exam time. I could not f
 **Design Documents**
 
 Design Documents we may need:
-Conceptual Data model
-ERD
-Flow chart
-Website Mock Ups
-Requirements list?
-Use case?
-Requirements List?
+Conceptual Data model,
+ERD,
+Flow chart,
+Website Mock Ups,
+Requirements list?,
+Use case?,
+Requirements List?,
 Statement of Work?
 
 After we make the design docs, we should have Emily check them and make sure our product has enough features to earn us full credit.
