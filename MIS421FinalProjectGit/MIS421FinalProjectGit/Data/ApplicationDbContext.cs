@@ -15,5 +15,6 @@ namespace MIS421FinalProjectGit.Data
         public DbSet<MIS421FinalProjectGit.Models.Investment> Investments { get; set; }
         public DbSet<MIS421FinalProjectGit.Models.Transaction> Transactions { get; set; }
         public DbSet<MIS421FinalProjectGit.Models.Budget> Budget { get; set; }
+        public DbSet<MIS421FinalProjectGit.Models.AdminAccount> AdminAccount { get; set; }
     }
 }
