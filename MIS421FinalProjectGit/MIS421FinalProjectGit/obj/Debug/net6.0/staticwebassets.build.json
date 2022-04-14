@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0eXrJ/bL99ntLbD01ACh0ruJPLoGJVNKlUTFGPtJtAs=",
+  "Hash": "fScT8oDsZF8iRwDqKv6YgLWgjFBRjm3ZMsyVh7rwo9I=",
   "Source": "MIS421FinalProjectGit",
   "BasePath": "_content/MIS421FinalProjectGit",
   "Mode": "Default",
@@ -1426,6 +1426,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\hs.validation.js"
+    },
+    {
+      "Identity": "C:\\Users\\lilyd\\source\\repos\\MIS421FinalProject\\MIS421FinalProjectGit\\MIS421FinalProjectGit\\wwwroot\\js\\hs-unfold.js",
+      "SourceId": "MIS421FinalProjectGit",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lilyd\\source\\repos\\MIS421FinalProject\\MIS421FinalProjectGit\\MIS421FinalProjectGit\\wwwroot\\",
+      "BasePath": "_content/MIS421FinalProjectGit",
+      "RelativePath": "js/hs-unfold.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\hs-unfold.js"
     },
     {
       "Identity": "C:\\Users\\lilyd\\source\\repos\\MIS421FinalProject\\MIS421FinalProjectGit\\MIS421FinalProjectGit\\wwwroot\\js\\site.js",

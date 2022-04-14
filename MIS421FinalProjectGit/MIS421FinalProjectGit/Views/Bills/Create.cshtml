@@ -1,10 +1,9 @@
 ﻿@model MIS421FinalProjectGit.Models.Bill
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Add New Bill";
 }
 
-<h1>Create</h1>
 
 <h4>Bill</h4>
 <hr />
@@ -14,7 +13,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="BillType" class="control-label"></label>
-                <input asp-for="BillType" class="form-control" />
+                <input asp-for="BillType" class="form-control" placeholder="BillType" />
                 <span asp-validation-for="BillType" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -24,7 +23,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Amount" class="control-label"></label>
-                <input asp-for="Amount" class="form-control" />
+                <input asp-for="Amount" class="form-control" placeholder="$00.00" />
                 <span asp-validation-for="Amount" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -34,16 +33,11 @@
             </div>
             <div class="form-group">
                 <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
+                <input asp-for="Description" class="form-control" placeholder="This was a bill for my foot cream"/>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="UserAccountID" class="control-label"></label>
-                <input asp-for="UserAccountID" class="form-control" />
-                <span asp-validation-for="UserAccountID" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-primary btn-pill" />
             </div>
         </form>
     </div>
@@ -52,7 +46,13 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
-
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src=".../wwwroot/js/hs-unfold.min.js"></script>
+    <script>
+  $(document).on('ready', function () {
+    // initialization of unfold
+    var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
+  });
+</script>
 }

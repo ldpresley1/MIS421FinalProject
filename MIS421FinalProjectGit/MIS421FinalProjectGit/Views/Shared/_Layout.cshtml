@@ -24,7 +24,7 @@
       <a class="nav-link" href="Login">Login</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link disabled" href="Bills">Bills</a>
+      <a class="nav-link" href="Bills">Bills</a>
     </li>
     <li class="nav-item">
       <a class="nav-link disabled" href="Budgets">Budgets</a>
@@ -137,6 +137,12 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+    <script>
+  $(document).on('ready', function () {
+    // initialization of unfold
+    var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
+  });
+</script>
 </body>
 
 </html>
