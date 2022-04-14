@@ -46,15 +46,7 @@
         </main>
     </div>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
-</body>
-
- <
-    
- <!-- ========== FOOTER ========== -->
+     <!-- ========== FOOTER ========== -->
     <footer class="">
         <div class="bg-gray-4000">
             <div class="container px-md-5">
@@ -153,9 +145,6 @@
     <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     
 
-
-   
-
     <!-- JS Vodi -->
     <script src="/assets/js/hs.core.js"></script>
     <script src="/assets/js/hs.validation.js"></script>
@@ -164,5 +153,10 @@
     <script src="/assets/js/hs.fancybox.js"></script>
 
 
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
 
 </html>
