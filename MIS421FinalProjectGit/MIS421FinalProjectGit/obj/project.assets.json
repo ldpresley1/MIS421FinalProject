@@ -9859,23 +9859,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\IreneBindang\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\lilyd\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\IreneBindang\\Source\\Repos\\MIS421FinalProject\\MIS421FinalProjectGit\\MIS421FinalProjectGit\\MIS421FinalProjectGit.csproj",
+      "projectUniqueName": "C:\\Users\\lilyd\\source\\repos\\MIS421FinalProject\\MIS421FinalProjectGit\\MIS421FinalProjectGit\\MIS421FinalProjectGit.csproj",
       "projectName": "MIS421FinalProjectGit",
-      "projectPath": "C:\\Users\\IreneBindang\\Source\\Repos\\MIS421FinalProject\\MIS421FinalProjectGit\\MIS421FinalProjectGit\\MIS421FinalProjectGit.csproj",
-      "packagesPath": "C:\\Users\\IreneBindang\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\IreneBindang\\Source\\Repos\\MIS421FinalProject\\MIS421FinalProjectGit\\MIS421FinalProjectGit\\obj\\",
+      "projectPath": "C:\\Users\\lilyd\\source\\repos\\MIS421FinalProject\\MIS421FinalProjectGit\\MIS421FinalProjectGit\\MIS421FinalProjectGit.csproj",
+      "packagesPath": "C:\\Users\\lilyd\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lilyd\\source\\repos\\MIS421FinalProject\\MIS421FinalProjectGit\\MIS421FinalProjectGit\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\IreneBindang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lilyd\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -9945,7 +9947,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
