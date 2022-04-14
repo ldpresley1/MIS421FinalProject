@@ -1,4 +1,4 @@
-﻿@model MIS421FinalProjectGit.Models.Investment
+﻿@model MIS421FinalProjectGit.Models.Investments
 
 @{
     ViewData["Title"] = "Details";
@@ -7,7 +7,7 @@
 <h1>Details</h1>
 
 <div>
-    <h4>Investment</h4>
+    <h4>Investments</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -28,7 +28,18 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.RiskLevel)
         </dd>
-        
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UserAccountID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UserAccountID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InvestmentImage)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InvestmentImage)
+        </dd>
     </dl>
 </div>
 <div>

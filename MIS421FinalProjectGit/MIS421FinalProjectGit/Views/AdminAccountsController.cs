@@ -35,7 +35,7 @@ namespace MIS421FinalProjectGit.Views
             }
 
             var adminAccount = await _context.AdminAccount
-                .FirstOrDefaultAsync(m => m.ID == id);
+                .FirstOrDefaultAsync(m => m.AdminID == id);
             if (adminAccount == null)
             {
                 return NotFound();
@@ -55,11 +55,11 @@ namespace MIS421FinalProjectGit.Views
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,FName,LName,Address,Email,UserAccountType,LastLogin")] AdminAccount adminAccount)
+        public async Task<IActionResult> Create([Bind("AdminID,AdminFName,AdminLName,AdminEmail,AdminLastLogin")] AdminAccounts adminAccount)
         {
             if (ModelState.IsValid)
             {
-                adminAccount.ID = Guid.NewGuid();
+                adminAccount.AdminID = Guid.NewGuid();
                 _context.Add(adminAccount);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -88,9 +88,9 @@ namespace MIS421FinalProjectGit.Views
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("ID,FName,LName,Address,Email,UserAccountType,LastLogin")] AdminAccount adminAccount)
+        public async Task<IActionResult> Edit(Guid id, [Bind("AdminID,AdminFName,AdminLName,AdminEmail,AdminLastLogin")] AdminAccounts adminAccount)
         {
-            if (id != adminAccount.ID)
+            if (id != adminAccount.AdminID)
             {
                 return NotFound();
             }
@@ -104,7 +104,7 @@ namespace MIS421FinalProjectGit.Views
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!AdminAccountExists(adminAccount.ID))
+                    if (!AdminAccountExists(adminAccount.AdminID))
                     {
                         return NotFound();
                     }
@@ -127,7 +127,7 @@ namespace MIS421FinalProjectGit.Views
             }
 
             var adminAccount = await _context.AdminAccount
-                .FirstOrDefaultAsync(m => m.ID == id);
+                .FirstOrDefaultAsync(m => m.AdminID == id);
             if (adminAccount == null)
             {
                 return NotFound();
@@ -149,7 +149,7 @@ namespace MIS421FinalProjectGit.Views
 
         private bool AdminAccountExists(Guid id)
         {
-            return _context.AdminAccount.Any(e => e.ID == id);
+            return _context.AdminAccount.Any(e => e.AdminID == id);
         }
     }
 }

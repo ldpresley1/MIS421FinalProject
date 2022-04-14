@@ -12,14 +12,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MIS421FinalProjectGit.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220414213607_AddedAdminModel")]
-    partial class AddedAdminModel
+    [Migration("20220414223723_UpdatedInvestmentMOdel")]
+    partial class UpdatedInvestmentMOdel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.3")
+                .HasAnnotation("ProductVersion", "6.0.4")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -226,35 +226,28 @@ namespace MIS421FinalProjectGit.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("MIS421FinalProjectGit.Models.AdminAccount", b =>
+            modelBuilder.Entity("MIS421FinalProjectGit.Models.AdminAccounts", b =>
                 {
-                    b.Property<Guid>("ID")
+                    b.Property<Guid>("AdminID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Address")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
+                    b.Property<string>("AdminEmail")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("FName")
+                    b.Property<string>("AdminFName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("LName")
+                    b.Property<string>("AdminLName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("LastLogin")
+                    b.Property<DateTime>("AdminLastLogin")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("UserAccountType")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ID");
+                    b.HasKey("AdminID");
 
                     b.ToTable("AdminAccount");
                 });
@@ -324,7 +317,7 @@ namespace MIS421FinalProjectGit.Data.Migrations
                     b.ToTable("Budget");
                 });
 
-            modelBuilder.Entity("MIS421FinalProjectGit.Models.Investment", b =>
+            modelBuilder.Entity("MIS421FinalProjectGit.Models.Investments", b =>
                 {
                     b.Property<Guid>("BillID")
                         .ValueGeneratedOnAdd()
@@ -335,6 +328,9 @@ namespace MIS421FinalProjectGit.Data.Migrations
 
                     b.Property<Guid?>("ID")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<byte[]>("InvestmentImage")
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("InvestmentType")
                         .IsRequired()
@@ -484,7 +480,7 @@ namespace MIS421FinalProjectGit.Data.Migrations
                     b.Navigation("UserAccount");
                 });
 
-            modelBuilder.Entity("MIS421FinalProjectGit.Models.Investment", b =>
+            modelBuilder.Entity("MIS421FinalProjectGit.Models.Investments", b =>
                 {
                     b.HasOne("MIS421FinalProjectGit.Models.UserAccount", "UserAccount")
                         .WithMany()

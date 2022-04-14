@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MIS421FinalProjectGit.Models.AdminAccount>
+﻿@model IEnumerable<MIS421FinalProjectGit.Models.AdminAccounts>
 
 @{
     ViewData["Title"] = "Index";
@@ -13,22 +13,16 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.FName)
+                @Html.DisplayNameFor(model => model.AdminFName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.LName)
+                @Html.DisplayNameFor(model => model.AdminLName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Address)
+                @Html.DisplayNameFor(model => model.AdminEmail)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UserAccountType)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LastLogin)
+                @Html.DisplayNameFor(model => model.AdminLastLogin)
             </th>
             <th></th>
         </tr>
@@ -37,27 +31,21 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.FName)
+                @Html.DisplayFor(modelItem => item.AdminFName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.LName)
+                @Html.DisplayFor(modelItem => item.AdminLName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Address)
+                @Html.DisplayFor(modelItem => item.AdminEmail)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Email)
+                @Html.DisplayFor(modelItem => item.AdminLastLogin)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.UserAccountType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastLogin)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.AdminID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.AdminID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.AdminID">Delete</a>
             </td>
         </tr>
 }

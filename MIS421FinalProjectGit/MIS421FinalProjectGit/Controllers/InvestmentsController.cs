@@ -34,14 +34,14 @@ namespace MIS421FinalProjectGit.Views
                 return NotFound();
             }
 
-            var investment = await _context.Investments
+            var investments = await _context.Investments
                 .FirstOrDefaultAsync(m => m.BillID == id);
-            if (investment == null)
+            if (investments == null)
             {
                 return NotFound();
             }
 
-            return View(investment);
+            return View(investments);
         }
 
         // GET: Investments/Create
@@ -55,16 +55,23 @@ namespace MIS421FinalProjectGit.Views
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("BillID,InvestmentType,Description,RiskLevel,UserAccountID")] Investment investment)
+        public async Task<IActionResult> Create([Bind("BillID,InvestmentType,Description,RiskLevel,UserAccountID,InvestmentImage")] Investments investments, IFormFile InvestmentImage)
         {
             if (ModelState.IsValid)
             {
-                investment.BillID = Guid.NewGuid();
-                _context.Add(investment);
+
+                if (InvestmentImage != null && InvestmentImage.Length > 0)
+                {
+                    var memoryStream = new MemoryStream();
+                    await InvestmentImage.CopyToAsync(memoryStream);
+                    investments.InvestmentImage = memoryStream.ToArray();
+                }
+                _context.Add(investments);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(investment);
+            return View(investments);
+
         }
 
         // GET: Investments/Edit/5
@@ -75,12 +82,12 @@ namespace MIS421FinalProjectGit.Views
                 return NotFound();
             }
 
-            var investment = await _context.Investments.FindAsync(id);
-            if (investment == null)
+            var investments = await _context.Investments.FindAsync(id);
+            if (investments == null)
             {
                 return NotFound();
             }
-            return View(investment);
+            return View(investments);
         }
 
         // POST: Investments/Edit/5
@@ -88,9 +95,9 @@ namespace MIS421FinalProjectGit.Views
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("BillID,InvestmentType,Description,RiskLevel,UserAccountID")] Investment investment)
+        public async Task<IActionResult> Edit(Guid id, [Bind("BillID,InvestmentType,Description,RiskLevel,UserAccountID,InvestmentImage")] Investments investments)
         {
-            if (id != investment.BillID)
+            if (id != investments.BillID)
             {
                 return NotFound();
             }
@@ -99,12 +106,12 @@ namespace MIS421FinalProjectGit.Views
             {
                 try
                 {
-                    _context.Update(investment);
+                    _context.Update(investments);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!InvestmentExists(investment.BillID))
+                    if (!InvestmentsExists(investments.BillID))
                     {
                         return NotFound();
                     }
@@ -115,7 +122,7 @@ namespace MIS421FinalProjectGit.Views
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(investment);
+            return View(investments);
         }
 
         // GET: Investments/Delete/5
@@ -126,14 +133,14 @@ namespace MIS421FinalProjectGit.Views
                 return NotFound();
             }
 
-            var investment = await _context.Investments
+            var investments = await _context.Investments
                 .FirstOrDefaultAsync(m => m.BillID == id);
-            if (investment == null)
+            if (investments == null)
             {
                 return NotFound();
             }
 
-            return View(investment);
+            return View(investments);
         }
 
         // POST: Investments/Delete/5
@@ -141,13 +148,13 @@ namespace MIS421FinalProjectGit.Views
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
-            var investment = await _context.Investments.FindAsync(id);
-            _context.Investments.Remove(investment);
+            var investments = await _context.Investments.FindAsync(id);
+            _context.Investments.Remove(investments);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool InvestmentExists(Guid id)
+        private bool InvestmentsExists(Guid id)
         {
             return _context.Investments.Any(e => e.BillID == id);
         }

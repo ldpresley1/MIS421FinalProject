@@ -1,7 +1,7 @@
-﻿@model IEnumerable<MIS421FinalProjectGit.Models.Investment>
+﻿@model IEnumerable<MIS421FinalProjectGit.Models.Investments>
 
 @{
-    ViewData["Title"] = "Investments";
+    ViewData["Title"] = "Index";
 }
 
 <h1>Index</h1>
@@ -21,7 +21,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.RiskLevel)
             </th>
-            
+            <th>
+                @Html.DisplayNameFor(model => model.UserAccountID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InvestmentImage)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -37,7 +42,23 @@
             <td>
                 @Html.DisplayFor(modelItem => item.RiskLevel)
             </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserAccountID)
+            </td>
            
+
+             <td>
+
+                @if (item.InvestmentImage != null)
+                {
+                    var base64 = Convert.ToBase64String(item.InvestmentImage);
+                    var imgSrc = string.Format("data:image/jpg;base64,{0}", base64);
+                    <img src="@imgSrc" style="height:100px; max-width=500px;border-radius:50%" />
+
+                    //An alternative was to display the image is below. The method below does not enforce security though but may be useful in certain cases.                  
+             }
+            </td>
+
             <td>
                 <a asp-action="Edit" asp-route-id="@item.BillID">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.BillID">Details</a> |
