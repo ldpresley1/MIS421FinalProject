@@ -8,165 +8,165 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MIS421FinalProjectGit
 build_property.RootNamespace = MIS421FinalProjectGit
-build_property.ProjectDir = C:\Users\lilyd\source\repos\MIS421FinalProject\MIS421FinalProjectGit\MIS421FinalProjectGit\
+build_property.ProjectDir = C:\Users\IreneBindang\source\repos\MIS421FinalProject\MIS421FinalProjectGit\MIS421FinalProjectGit\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\lilyd\source\repos\MIS421FinalProject\MIS421FinalProjectGit\MIS421FinalProjectGit
+build_property.MSBuildProjectDirectory = C:\Users\IreneBindang\source\repos\MIS421FinalProject\MIS421FinalProjectGit\MIS421FinalProjectGit
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/AdminAccounts/Create.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/AdminAccounts/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5BY2NvdW50c1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/AdminAccounts/Delete.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/AdminAccounts/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5BY2NvdW50c1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/AdminAccounts/Details.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/AdminAccounts/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5BY2NvdW50c1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/AdminAccounts/Edit.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/AdminAccounts/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5BY2NvdW50c1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/AdminAccounts/Index.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/AdminAccounts/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5BY2NvdW50c1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Bills/Create.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Bills/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlsbHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Bills/Delete.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Bills/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlsbHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Bills/Details.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Bills/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlsbHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Bills/Edit.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Bills/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlsbHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Bills/Index.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Bills/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlsbHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Budgets/Create.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Budgets/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVkZ2V0c1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Budgets/Delete.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Budgets/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVkZ2V0c1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Budgets/Details.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Budgets/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVkZ2V0c1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Budgets/Edit.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Budgets/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVkZ2V0c1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Budgets/Index.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Budgets/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVkZ2V0c1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Home/Index.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Home/Privacy.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Investments/Create.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Investments/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZXN0bWVudHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Investments/Delete.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Investments/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZXN0bWVudHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Investments/Details.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Investments/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZXN0bWVudHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Investments/Edit.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Investments/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZXN0bWVudHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Investments/Index.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Investments/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZXN0bWVudHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Shared/Error.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Transactions/Create.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Transactions/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY3Rpb25zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Transactions/Delete.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Transactions/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY3Rpb25zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Transactions/Details.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Transactions/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY3Rpb25zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Transactions/Edit.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Transactions/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY3Rpb25zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Transactions/Index.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Transactions/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY3Rpb25zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/UserAccounts/Create.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/UserAccounts/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckFjY291bnRzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/UserAccounts/Delete.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/UserAccounts/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckFjY291bnRzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/UserAccounts/Details.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/UserAccounts/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckFjY291bnRzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/UserAccounts/Edit.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/UserAccounts/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckFjY291bnRzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/UserAccounts/Index.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/UserAccounts/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckFjY291bnRzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/_ViewImports.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/_ViewStart.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Shared/_Layout.cshtml]
+[C:/Users/IreneBindang/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-gpv7xmjrzq
