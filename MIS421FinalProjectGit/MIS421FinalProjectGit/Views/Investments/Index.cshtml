@@ -1,70 +1,137 @@
 ﻿@model IEnumerable<MIS421FinalProjectGit.Models.Investments>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Investment with Us";
 }
 
-<h1>Index</h1>
+<link rel="stylesheet" href="~/css/Index.css" asp-append-version="true" />
+<h1>Investments</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.InvestmentType)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.RiskLevel)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UserAccountID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.InvestmentImage)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.InvestmentType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RiskLevel)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UserAccountID)
-            </td>
-           
+<head>
+<style>
 
-             <td>
 
-                @if (item.InvestmentImage != null)
-                {
-                    var base64 = Convert.ToBase64String(item.InvestmentImage);
-                    var imgSrc = string.Format("data:image/jpg;base64,{0}", base64);
-                    <img src="@imgSrc" style="height:100px; max-width=500px;border-radius:50%" />
 
-                    //An alternative was to display the image is below. The method below does not enforce security though but may be useful in certain cases.                  
-             }
-            </td>
+</style>
+</head>
+<body>
 
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.BillID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.BillID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.BillID">Delete</a>
-            </td>
-        </tr>
+    <h2 style="text-align:center">Slideshow Gallery</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="https://www.lehnerinvestments.com/wp-content/uploads/2021/10/Growing_Graph_Plant-780x438.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="https://ocdn.eu/images/pulscms/NmE7MDA_/9800cac2d167fa9f826e41c7b25b968e.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="https://ocdn.eu/images/pulscms/NmE7MDA_/9800cac2d167fa9f826e41c7b25b968e.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="https://ocdn.eu/images/pulscms/NmE7MDA_/9800cac2d167fa9f826e41c7b25b968e.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="https://ocdn.eu/images/pulscms/NmE7MDA_/9800cac2d167fa9f826e41c7b25b968e.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="https://ocdn.eu/images/pulscms/NmE7MDA_/9800cac2d167fa9f826e41c7b25b968e.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="img_woods.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_5terre.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_mountains.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_lights.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_nature.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="img_snow.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+    </div>
+  </div>
+</div>
+
+<!--JavaScript Functions-->
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
-    </tbody>
-</table>
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
