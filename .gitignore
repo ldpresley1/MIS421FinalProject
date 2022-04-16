@@ -363,6 +363,7 @@ MigrationBackup/
 FodyWeavers.xsd
 
 #Added by Donald
+#I am struggling with git
 #"C:\Users\donal\source\repos\MIS421FinalProject2.0\.gitignore"
 #"C:\Users\donal\source\repos\MIS421FinalProject2.0\MIS421FinalProjectGit\.vs\MIS421FinalProjectGit\DesignTimeBuild\.dtbcache.v2"
 #"C:\Users\donal\source\repos\MIS421FinalProject2.0\MIS421FinalProjectGit\.vs\MIS421FinalProjectGit\v17\.suo"
@@ -378,29 +379,6 @@ MIS421FinalProjectGit\obj\MIS421FinalProjectGit.csproj.nuget.dgspec.json
 MIS421FinalProjectGit\obj\project.assets.json
 MIS421FinalProjectGit\obj\project.nuget.cache
 
-
 .suo
 .futdachce.v1
 .dtbcache.v2
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
