@@ -11,32 +11,42 @@
     <link rel="stylesheet" href="~/MIS421FinalProjectGit/wwwroot/lib/bootstrap/dist/js/bootstrap.js" asp-append-version="true" />
 
 </head>
+
+
 <body>
-    <div class="bg-dark p-4">
-  <ul class="nav nav-white nav-pills">
-    <li class="nav-item">
-      <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="Signup">Sign up</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="Login">Login</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link disabled" href="Bills">Bills</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link disabled" href="Budgets">Budgets</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link disabled" href="Transactions">Transactions</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link disabled" href="Investments">Investments</a>
-    </li>
-  </ul>
-</div>
+    @*<header>*@
+        <div class="bg-dark p-4">
+      <ul class="nav nav-white nav-pills">
+        <li class="nav-item">
+          <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+        </li>
+   
+        <partial name="_LoginPartial" />
+    
+         @*<li class="nav-item">
+          <a class="nav-link" href="Signup">Sign up</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Login">Login</a>
+        </li>*@
+
+        <li class="nav-item">
+          <a class="nav-link disabled" href="Bills">Bills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="Budgets">Budgets</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="Transactions">Transactions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="Investments">Investments</a>
+        </li>
+      </ul>
+    </div>
+  @*  </header>*@
+
+
 <div class="text-center font-size-4 shadow-primary-lg bg-primary text-white p-6 mb-7">@ViewData["Title"]</div>
     
       
