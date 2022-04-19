@@ -14,8 +14,24 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="BillID" />
             <div class="form-group">
-                <label asp-for="BillType" class="control-label"></label>
-                <input asp-for="BillType" class="form-control" />
+                <label asp-for="BillType" class="input-label"></label>
+                <select id="BillType" name="BillType" class="form-control">
+
+<option value=""></option>
+<option value="Rent">Rent</option>
+<option value="Loan">Loan</option>
+<option value="Medical">Medical</option>
+<option value="Car Insurance">Car Insurance</option>
+<option value="Health Insurance">Health Insurance</option>
+<option value="Alimony">Alimony</option>
+<option value="Life Insurance">Life Insurance</option>
+<option value="Cable">Cable</option>
+<option value="Internet">Internet</option>
+<option value="Phone">Phone</option>
+<option value="Child Support">Child Support</option>
+<option value="Utilities">Utilities</option>
+<option value="Other">Other</option>
+</select>
                 <span asp-validation-for="BillType" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -35,13 +51,8 @@
             </div>
             <div class="form-group">
                 <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
+                <input asp-for="Description" class="form-control" placeholder="This was a bill for my foot cream"/>
                 <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="UserAccountID" class="control-label"></label>
-                <input asp-for="UserAccountID" class="form-control" />
-                <span asp-validation-for="UserAccountID" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

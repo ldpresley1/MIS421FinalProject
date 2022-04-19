@@ -35,7 +35,7 @@
                 @Html.DisplayFor(modelItem => item.DueDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Amount)
+                <p>$@Html.DisplayFor(modelItem => item.Amount)</p>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DayPaid)
@@ -44,9 +44,8 @@
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.BillID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.BillID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.BillID">Delete</a>
+                <button type="button" class="btn btn-primary btn-pill"><a style="color:white" asp-action="Edit" asp-route-id="@item.BillID">Edit</a> </button>
+                <button type="button" class="btn btn-primary btn-pill"><a style="color:white" asp-action="Delete" asp-route-id="@item.BillID">Delete</a></button>
             </td>
         </tr>
 }
