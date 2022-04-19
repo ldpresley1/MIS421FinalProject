@@ -4,8 +4,6 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
-
 <h4>Transaction</h4>
 <hr />
 <div class="row">
@@ -13,24 +11,42 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="TransType" class="control-label"></label>
-                <input asp-for="TransType" class="form-control" />
+                <label asp-for="TransType" class="control-label">Type</label>
+                <select id="TransType" name="TransType" class="form-control">
+
+<option selected="selected"value=""></option>
+<option value="Credit">Credit</option>
+<option value="Debit">Debit</option>
+</select>
                 <span asp-validation-for="TransType" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TransCategory" class="control-label"></label>
-                <input asp-for="TransCategory" class="form-control" />
+                <label asp-for="TransCategory" class="control-label">Category</label>
+                <select id="BillType" name="BillType" class="form-control">
+
+<option selected="selected"value=""></option>
+<option value="Groceries">Groceries</option>
+<option value="Takeout">Takeout</option>
+<option value="Entertainment">Entertainment</option>
+<option value="Gas">Gas</option>
+<option value="Car Repair">Car Repair</option>
+<option value="Transportation">Transportation</option>
+<option value="House Repairs">House Repairs</option>
+<option value="Pet">Pet</option>
+<option value="Clothes">Clothes</option>
+<option value="Medication">Medication</option>
+<option value="Gym">Gym</option>
+<option value="Haircut">Haircut</option>
+<option value="Gift">Gift</option>
+<option value="Donation">Donation</option>
+<option value="Other">Other</option>
+</select>
                 <span asp-validation-for="TransCategory" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="comments" class="control-label"></label>
-                <input asp-for="comments" class="form-control" />
+                <label asp-for="comments" class="control-label">Comments</label>
+                <input asp-for="comments" class="form-control" placeholder="Got a mohawk" />
                 <span asp-validation-for="comments" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="UserAccountID" class="control-label"></label>
-                <input asp-for="UserAccountID" class="form-control" />
-                <span asp-validation-for="UserAccountID" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

@@ -3,26 +3,17 @@
 @{
     ViewData["Title"] = "Transactions";
 }
-
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
+<table class="table table-dark">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.TransType)
+                Type
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TransCategory)
+                Category
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.comments)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UserAccountID)
+                Comments
             </th>
             <th></th>
         </tr>
@@ -40,14 +31,13 @@
                 @Html.DisplayFor(modelItem => item.comments)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.UserAccountID)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.TransactionID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.TransactionID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.TransactionID">Delete</a>
+               <button type="button" class="btn btn-primary btn-pill"><a style="color:white"asp-action="Edit" asp-route-id="@item.TransactionID">Edit</a> </button>
+                <button type="button" class="btn btn-primary btn-pill"><a style="color:white" asp-action="Delete" asp-route-id="@item.TransactionID">Delete</a></button>
             </td>
         </tr>
 }
     </tbody>
 </table>
+<button type="button" class="btn btn-primary btn-pill">
+    <a style="color:white" asp-action="Create">Add Transaction</a>
+</button>
