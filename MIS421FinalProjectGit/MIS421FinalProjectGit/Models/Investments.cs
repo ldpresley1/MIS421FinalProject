@@ -1,9 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MIS421FinalProjectGit.Models
 {
-    public class Investment
+    public class Investments
     {
         [Key]
         public Guid BillID { get; set; }
@@ -16,5 +17,8 @@ namespace MIS421FinalProjectGit.Models
         [ForeignKey("ID")]
         public UserAccount? UserAccount { get; set; }
 
+        [DataType(DataType.Upload)]
+        [DisplayName("Investment Image")]
+        public byte[]? InvestmentImage { get; set; }
     }
 }
