@@ -7,13 +7,14 @@
     <title>@ViewData["Title"] - BudgetBuddy</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    
+    <link rel="stylesheet" href="~/css/Index.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MIS421FinalProjectGit/wwwroot/lib/bootstrap/dist/js/bootstrap.js" asp-append-version="true" />
 
 </head>
 
 
 <body>
+     
     @*<header>*@
         <div class="bg-dark p-4">
       <ul class="nav nav-white nav-pills">
@@ -45,10 +46,15 @@
       </ul>
     </div>
   @*  </header>*@
-
+  
 
 <div class="text-center font-size-4 shadow-primary-lg bg-primary text-white p-6 mb-7">@ViewData["Title"]</div>
-    
+ <div class="container-stock-ticker">
+     <h2 id="ethereum">Ethereum</h2>
+         <h3 id="stock-ticker">
+        ----
+    </h3>       
+    </div>     
       
     <div class="container">
         <main role="main" class="pb-3">
@@ -128,6 +134,9 @@
         </div>
     </footer>
     <!-- ========== END FOOTER ========== -->
+
+    <!--Local JS-->
+     <script src="/js/site.js"></script>
 
      <!-- JS Global Compulsory -->
     <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
