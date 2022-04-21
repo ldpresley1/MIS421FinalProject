@@ -353,6 +353,9 @@ namespace MIS421FinalProjectGit.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<double>("Amount")
+                        .HasColumnType("float");
+
                     b.Property<Guid?>("ID")
                         .HasColumnType("uniqueidentifier");
 

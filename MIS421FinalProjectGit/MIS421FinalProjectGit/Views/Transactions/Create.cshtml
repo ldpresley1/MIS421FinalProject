@@ -22,7 +22,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="TransCategory" class="control-label">Category</label>
-                <select id="BillType" name="BillType" class="form-control">
+                <select id="TransCategory" name="TransCategory" class="form-control">
 
 <option selected="selected"value=""></option>
 <option value="Groceries">Groceries</option>
@@ -42,6 +42,11 @@
 <option value="Other">Other</option>
 </select>
                 <span asp-validation-for="TransCategory" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Amount" class="control-label"></label>
+                <input asp-for="Amount" class="form-control" placeholder="$00.00" />
+                <span asp-validation-for="Amount" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="comments" class="control-label">Comments</label>
