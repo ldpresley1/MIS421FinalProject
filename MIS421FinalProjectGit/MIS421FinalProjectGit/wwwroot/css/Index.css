@@ -10,10 +10,13 @@ body {
 }
 
 img {
-    vertical-align: middle;
+    /*vertical-align: middle;
     display: block;
     width: 10%;
-    height: 10%;
+    height: 10%;*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Position the image container (needed to position the left and right arrows) */
@@ -38,7 +41,7 @@ img {
     position: absolute;
     top: 40%;
     width: auto;
-    padding: 16px;
+    padding: 6px;
     margin-top: -50px;
     color: white;
     font-weight: bold;
@@ -47,10 +50,12 @@ img {
     user-select: none;
     -webkit-user-select: none;
 }
-
+.prev {
+    left: 125px;
+}
 /* Position the "next button" to the right */
 .next {
-    right: 0;
+    right: 150px;
     border-radius: 3px 0 0 3px;
 }
 
@@ -77,6 +82,8 @@ img {
     background-color: #222;
     padding: 2px 16px;
     color: white;
+    width: 85%;
+    margin-left:7.5%;
 }
 
 .row:after {
@@ -88,7 +95,12 @@ img {
 /* Six columns side by side */
 .column {
     float: left;
-    width: 16.66%;
+    width: 15%;
+    height: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding:  0px 1px ;
 }
 
 /* Add a transparency effect for thumnbail images */
@@ -102,23 +114,37 @@ img {
  
 }
 #stock-ticker {
+    padding: 20px;
+    margin-right: 45px;
+    margin-right: 45px;
+}
+#bitcoin-ticker {
+    padding: 20px;
+    margin-right: 45px;
+    margin-right: 45px;
+}
+#terra-ticker {
+    padding: 20px;
+    margin-right: 45px;
+    margin-right: 45px;
+}
+#cardano-ticker {
+    padding: 20px;
+    margin-right:45px;
+    margin-right:45px;
+}
+
+.container-stock-ticker {
+   
+    display: flex;
+    width: 100%;
+
     padding: 10px;
     margin-left: 45px;
-   
-    
-}
-#ethereum {
-    margin-left: 45px;
     margin-bottom: 0;
-    
+    margin-top: 25px;
 }
-.container-stock-ticker {
-    width: 15%;
-    height: 15%;
-    border-radius: 5%;
-    background-color: lavender;
-    margin-left: 45px;
-    margin-bottom: 45px;
-   
+.crypto{
+    padding:85px 5px;
 }
 

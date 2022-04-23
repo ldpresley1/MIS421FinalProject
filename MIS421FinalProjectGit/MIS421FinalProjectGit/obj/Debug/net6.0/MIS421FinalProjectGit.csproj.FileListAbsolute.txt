@@ -1098,3 +1098,7 @@ C:\Users\IreneBindang\source\repos\Final\MIS421FinalProjectGit\MIS421FinalProjec
 C:\Users\IreneBindang\source\repos\Final\MIS421FinalProjectGit\MIS421FinalProjectGit\obj\Debug\net6.0\MIS421FinalProjectGit.pdb
 C:\Users\IreneBindang\source\repos\Final\MIS421FinalProjectGit\MIS421FinalProjectGit\obj\Debug\net6.0\MIS421FinalProjectGit.genruntimeconfig.cache
 C:\Users\IreneBindang\source\repos\Final\MIS421FinalProjectGit\MIS421FinalProjectGit\obj\Debug\net6.0\ref\MIS421FinalProjectGit.dll
+C:\Users\IreneBindang\Source\Repos\MIS421FinalProject\MIS421FinalProjectGit\MIS421FinalProjectGit\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\IreneBindang\Source\Repos\MIS421FinalProject\MIS421FinalProjectGit\MIS421FinalProjectGit\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\IreneBindang\Source\Repos\MIS421FinalProject\MIS421FinalProjectGit\MIS421FinalProjectGit\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\IreneBindang\Source\Repos\MIS421FinalProject\MIS421FinalProjectGit\MIS421FinalProjectGit\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
