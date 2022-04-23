@@ -114,24 +114,28 @@ img {
  
 }
 #stock-ticker {
-    padding: 20px;
+    padding: 10px;
     margin-right: 45px;
     margin-right: 45px;
+    margin-top:5px; 
 }
 #bitcoin-ticker {
-    padding: 20px;
+    padding: 10px;
     margin-right: 45px;
     margin-right: 45px;
+    margin-top: 5px;
 }
 #terra-ticker {
-    padding: 20px;
+    padding: 10px;
     margin-right: 45px;
     margin-right: 45px;
+    margin-top: 5px;
 }
 #cardano-ticker {
-    padding: 20px;
-    margin-right:45px;
-    margin-right:45px;
+    padding: 10px;
+    margin-right: 45px;
+    margin-right: 45px;
+    margin-top: 5px;
 }
 
 .container-stock-ticker {
