@@ -151,4 +151,12 @@ img {
 .crypto{
     padding:85px 5px;
 }
+.nav-item-left {
+    margin-right: 1%;
+    background-color:cadetblue;
+    border-radius:10%;
+}
+.nav-item-investment {
+    margin-right: auto;
+}
 
