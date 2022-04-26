@@ -6,6 +6,7 @@
     ViewData["Title"] = "Login";
 }
 
+ <link rel="stylesheet" href="~/css/Index.css" asp-append-version="true" />
 
 @if (SignInManager.IsSignedIn(User))
 {
@@ -33,10 +34,10 @@
 }
 else
 {
-    <li class="nav-item">
+    <li class="nav-item-left">
         <a class="nav-link" asp-area="Identity" asp-page="/Account/Register">Register</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item-left">
         <a class="nav-link" asp-area="Identity" asp-page="/Account/Login">Login</a>
     </li>
 }
