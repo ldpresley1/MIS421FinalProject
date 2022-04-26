@@ -7,14 +7,13 @@
     <title>@ViewData["Title"] - BudgetBuddy</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/Index.css" asp-append-version="true" />
+    
     <link rel="stylesheet" href="~/MIS421FinalProjectGit/wwwroot/lib/bootstrap/dist/js/bootstrap.js" asp-append-version="true" />
 
 </head>
 
 
 <body>
-     
     @*<header>*@
         <div class="bg-dark p-4">
       <ul class="nav nav-white nav-pills">
@@ -23,14 +22,33 @@
         </li>
    
         <partial name="_LoginPartial" />
+    
+         @*<li class="nav-item">
+          <a class="nav-link" href="Signup">Sign up</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Login">Login</a>
+        </li>*@
 
+        <li class="nav-item">
+          <a class="nav-link disabled" href="Bills">Bills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="Budgets">Budgets</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="Transactions">Transactions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="Investments">Investments</a>
+        </li>
       </ul>
     </div>
   @*  </header>*@
-  
+
 
 <div class="text-center font-size-4 shadow-primary-lg bg-primary text-white p-6 mb-7">@ViewData["Title"]</div>
-  
+    
       
     <div class="container">
         <main role="main" class="pb-3">
@@ -111,9 +129,6 @@
     </footer>
     <!-- ========== END FOOTER ========== -->
 
-    <!--Local JS-->
-     <script src="/js/site.js"></script>
-
      <!-- JS Global Compulsory -->
     <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
     <script src="/assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
@@ -132,12 +147,6 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
-    <script>
-  $(document).on('ready', function () {
-    // initialization of unfold
-    var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
-  });
-</script>
 </body>
 
 </html>
