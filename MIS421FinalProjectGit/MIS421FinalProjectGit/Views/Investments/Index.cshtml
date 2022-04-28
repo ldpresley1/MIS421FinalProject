@@ -35,7 +35,7 @@
 
      
    
-    <h2 style="text-align:center">Investment Instruments</h2>
+    <h1 style="text-align:center" id="investment-instruments-container"><b>Investment Instruments</b></h1>
 
 <div class="container">
   <div class="mySlides">
@@ -115,6 +115,65 @@
     </div>
   </div>
 </div>
+
+ <div id="myInvestments">
+     <h1  style="text-align:center" id="myInvestments-insider"><b>My Investments</b></h1>
+
+     <table class="table-clear">
+    <thead>
+        <tr>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.InvestmentType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RiskLevel)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.BillID)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            
+   
+
+            <td>
+                @Html.DisplayFor(modelItem => item.InvestmentType)
+            </td>
+            <td>
+                <p>$@Html.DisplayFor(modelItem => item.Description)</p>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RiskLevel)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.BillID)
+            </td>
+           
+            <td id="botton-container">
+                <button type="button" class="add-investment"><a style="color:white" asp-action="Edit" asp-route-id="@item.BillID">Edit</a> </button>
+                <button type="button" class="add-investment"><a style="color:white" asp-action="Delete" asp-route-id="@item.BillID">Delete</a></button>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<button type="button" class="btn btn-primary btn-pill-last">
+    <a style="color:white" asp-action="Create">Add Investment</a>
+</button>
+
+
+ </div>
+
+
 
 
 <!--JavaScript Functions-->

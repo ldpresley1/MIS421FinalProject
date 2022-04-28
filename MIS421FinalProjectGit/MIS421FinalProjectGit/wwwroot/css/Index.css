@@ -160,4 +160,37 @@ img {
 .nav-item-investment {
     margin-right: auto;
 }
+#myInvestments {
+    margin-top: 85px;
+    margin-left: 85px;
+    margin-right: 85px;
+   
+}
+#myInvestments-insider {
+    padding: 15px 15px;
+    background-color: lightslategrey;
+    margin-bottom:85px;
 
+}
+.table-clear {
+    color: black;
+    background-color:lightsteelblue;
+}
+.the btn-primary btn-pill{
+    color: antiquewhite;
+}
+.add-investment {
+    background-color: inherit;
+    margin-top: 45px;
+    border-radius: 35%;
+    float: left;
+    border:none;
+}
+#investment-instruments-container {
+    margin-top:65px;
+    margin-bottom:45px;
+}
+.btn btn-primary btn-pill-last{
+    margin-top: 100px;
+    margin-bottom:75px;
+}
