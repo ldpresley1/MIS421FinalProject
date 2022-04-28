@@ -196,3 +196,9 @@ img {
     margin-top: 100px;
     margin-bottom:75px;
 }
+.home-conteiner {
+    background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fcity&psig=AOvVaw2XA_qjz9UWRcfcPHLjFZCZ&ust=1651260082769000&source=images&cd=vfe&ved=0CAkQjRxqFwoTCICJ3ai9t_cCFQAAAAAdAAAAABAU);
+}
+#home-paragraph{
+    color:aliceblue;
+}
