@@ -164,17 +164,19 @@ img {
     margin-top: 85px;
     margin-left: 85px;
     margin-right: 85px;
+    margin-bottom: 100px;
    
 }
 #myInvestments-insider {
     padding: 15px 15px;
-    background-color: lightslategrey;
     margin-bottom:85px;
 
 }
 .table-clear {
     color: black;
     background-color:lightsteelblue;
+    width:100%;
+    padding: 55px 55px 55px;
 }
 .the btn-primary btn-pill{
     color: antiquewhite;
