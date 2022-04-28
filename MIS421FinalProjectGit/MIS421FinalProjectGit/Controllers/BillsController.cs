@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MIS421FinalProjectGit.Data;
 using MIS421FinalProjectGit.Models;
+using Microsoft.AspNet.Identity; // NuGet: Microsoft ASP.NET Identity Core.
+using System.Security.Principal;
 
 namespace MIS421FinalProjectGit.Views
 {
@@ -59,6 +61,7 @@ namespace MIS421FinalProjectGit.Views
         {
             if (ModelState.IsValid)
             {
+
                 bill.BillID = Guid.NewGuid();
                 _context.Add(bill);
                 await _context.SaveChangesAsync();

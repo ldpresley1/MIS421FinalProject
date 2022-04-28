@@ -1102,3 +1102,4 @@ C:\Users\IreneBindang\Source\Repos\MIS421FinalProject\MIS421FinalProjectGit\MIS4
 C:\Users\IreneBindang\Source\Repos\MIS421FinalProject\MIS421FinalProjectGit\MIS421FinalProjectGit\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\IreneBindang\Source\Repos\MIS421FinalProject\MIS421FinalProjectGit\MIS421FinalProjectGit\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\IreneBindang\Source\Repos\MIS421FinalProject\MIS421FinalProjectGit\MIS421FinalProjectGit\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\lilyd\source\repos\MIS421FinalProject\MIS421FinalProjectGit\MIS421FinalProjectGit\bin\Debug\net6.0\Microsoft.AspNet.Identity.Core.dll

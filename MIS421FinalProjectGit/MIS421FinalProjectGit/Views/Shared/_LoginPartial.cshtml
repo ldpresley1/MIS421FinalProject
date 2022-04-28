@@ -10,19 +10,11 @@
 
 @if (SignInManager.IsSignedIn(User))
 {
-    <li class="nav-item">
-        <a  class="nav-link" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a>
-    </li>
-    <li class="nav-item">
-        <form  class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-            <button  type="submit" class="nav-link btn btn-link text-dark">Logout</button>
-        </form>
-    </li>
      <li class="nav-item">
           <a class="nav-link" href="Bills">Bills</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="Budgets">Budgets</a>
+          <a class="nav-link" href="Budgets">Budgets</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="Transactions">Transactions</a>
@@ -30,14 +22,22 @@
         <li class="nav-item">
           <a class="nav-link" href="Investments">Investments</a>
         </li>
+         <li class="nav-item">
+        <a  class="nav-link" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a>
+    </li>
+        <li class="nav-item">
+        <form   asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+            <button  type="submit" class="nav-link">Logout</button>
+        </form>
+    </li>
     
 }
 else
 {
-    <li class="nav-item-left">
+    <li class="nav-item">
         <a class="nav-link" asp-area="Identity" asp-page="/Account/Register">Register</a>
     </li>
-    <li class="nav-item-left">
+    <li class="nav-item">
         <a class="nav-link" asp-area="Identity" asp-page="/Account/Login">Login</a>
     </li>
 }
