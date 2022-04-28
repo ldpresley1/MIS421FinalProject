@@ -198,7 +198,47 @@ img {
 }
 .home-conteiner {
     background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fcity&psig=AOvVaw2XA_qjz9UWRcfcPHLjFZCZ&ust=1651260082769000&source=images&cd=vfe&ved=0CAkQjRxqFwoTCICJ3ai9t_cCFQAAAAAdAAAAABAU);
+   
 }
 #home-paragraph{
     color:aliceblue;
+}
+#about-dysplay {
+    color: aliceblue;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 15%;
+    text-align: center;
+    text-align: justify;
+    padding: 35px 5px 35px 35px;
+}
+#about-container {
+    margin-left: 5%;
+    color: aliceblue;
+    margin-top: 105px;
+    padding: 5px;
+}
+.extra-content {
+    background-color: slategrey;
+    width: 60%;
+    text-align: center;
+    display: block;
+    position: relative;
+    border-radius: 50px;
+    opacity: 0.7;
+    align-items: center;
+    margin-left: 20%;
+}
+#the-body {
+    background-image: url(https://media.istockphoto.com/photos/smart-city-and-abstract-dot-point-connect-with-gradient-line-picture-id1203720647?k=20&m=1203720647&s=612x612&w=0&h=MWpNrTup0fDRKkGI2GlKbXKp8UqSufJBV2iD92fIOIk=);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+    height: 500%;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    
 }
