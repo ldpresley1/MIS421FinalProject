@@ -3,7 +3,7 @@
 body {
     font-family: Arial;
     margin: 0;
-    background-color:gainsboro;
+    background-color:darkgray;
 }
 
 * {
@@ -144,13 +144,14 @@ img {
     display: flex;
     width: 100%;
 
-    padding: 10px;
+    padding: 55px;
     margin-left: 45px;
     margin-bottom: 0;
     margin-top: 25px;
 }
 .crypto{
-    padding:85px 5px;
+    padding:185px;
+    margin-right:51%;
 }
 .nav-item-left {
     margin-right: 1%;
@@ -165,7 +166,11 @@ img {
     margin-left: 85px;
     margin-right: 85px;
     margin-bottom: 100px;
-   
+    background-color:cadetblue;
+    border-radius: 50px;
+    opacity: 0.7;
+    padding: 45px;
+    color:aliceblue;
 }
 #myInvestments-insider {
     padding: 15px 15px;
@@ -174,9 +179,10 @@ img {
 }
 .table-clear {
     color: black;
-    background-color:lightsteelblue;
-    width:100%;
+    width: 100%;
     padding: 55px 55px 55px;
+    
+    
 }
 .the btn-primary btn-pill{
     color: antiquewhite;

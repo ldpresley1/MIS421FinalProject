@@ -5,30 +5,27 @@
 }
 
 <link rel="stylesheet" href="~/css/Index.css" asp-append-version="true" />
+<script src="https://kit.fontawesome.com/bc8d2b84e8.js" crossorigin="anonymous"></script>
 
 <head>
-<style>
-
-
-
-</style>
+ <script src="https://kit.fontawesome.com/bc8d2b84e8.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
 
-
+   
     <div class="container-stock-ticker">
          
-         <div id="crypto">Bitcoin
+         <div id="crypto"><i class='fab fa-bitcoin fa-spin fa-3x'></i>Bitcoin  |
          <p id="bitcoin-ticker">----</p> 
          </div>
-         <div id="crypto">Terra
+         <div id="crypto"><i class='fas fa-bomb fa-spin fa-3x'></i>Terra  |
          <p id="terra-ticker">----</p> 
          </div>
-         <div id="crypto">cardano
+         <div id="crypto"><i class='fas fa-bomb fa-spin fa-3x'></i>cardano  |
          <p id="cardano-ticker">----</p> 
          </div>
-         <div id="crypto">Ethereum
+         <div id="crypto"><i class='fab fa-ethereum fa-spin fa-3x'></i>Ethereum
          <p id="stock-ticker">----</p> 
          </div>
     </div>  
@@ -158,8 +155,9 @@
             </td>
            
             <td id="botton-container">
-                <button type="button" class="add-investment"><a style="color:white" asp-action="Edit" asp-route-id="@item.BillID">Edit</a> </button>
-                <button type="button" class="add-investment"><a style="color:white" asp-action="Delete" asp-route-id="@item.BillID">Delete</a></button>
+                <a asp-action="Edit" asp-route-id="@item.BillID" style="color:white">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.BillID" style="color:white">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.BillID" style="color:white">Delete</a>
             </td>
         </tr>
 }
