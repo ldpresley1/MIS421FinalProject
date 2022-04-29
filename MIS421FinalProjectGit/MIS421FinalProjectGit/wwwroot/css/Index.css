@@ -23,9 +23,21 @@ img {
 }
 
 /* Position the image container (needed to position the left and right arrows) */
-.container {
+.container-slides {
     position: relative;
+    margin-left: 85px;
+    margin-right: 85px;
+    background-color: lightslategray;
+    margin-top: 85px;
+    margin-left: 85px;
+    margin-right: 85px;
+    margin-bottom: 100px;
+    background-color: cadetblue;
+    border-radius: 50px;
+    opacity: 0.7;
+    padding: 45px;
 }
+
 
 /* Hide the images by default */
 .mySlides {
@@ -97,7 +109,10 @@ img {
     display: table;
     clear: both;
 }
-
+.row {
+    margin-left: 76px;
+    margin-right: 76px;
+}
 /* Six columns side by side */
 .column {
     float: left;
@@ -106,7 +121,7 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding:  0px 1px ;
+    padding: 0px 1px;
 }
 
 /* Add a transparency effect for thumnbail images */
