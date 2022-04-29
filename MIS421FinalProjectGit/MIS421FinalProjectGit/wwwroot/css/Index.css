@@ -201,7 +201,8 @@ img {
    
 }
 #home-paragraph{
-    color:aliceblue;
+    color:gainsboro;
+    padding:35px;
 }
 #about-dysplay {
     color: aliceblue;
@@ -238,7 +239,9 @@ img {
     height: 500%;
     width: 100%;
     height: 100%;
-    z-index: 1;
-
-    
+    z-index: 1;   
+}
+#calculator-home{
+    cursor:pointer;
+    padding:calc(var(--border) + var(--gap));
 }
