@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1tOdqKpDrSRNev3fgmPehnAqsjt9+ZYGX+bYlBfNcPuRCkkppkB023wGyvsszi0nHGxBP9Gc7qQ/Yf83+X6Jfg==",
+  "dgSpecHash": "W//ogjAE6i4foKhR9Lq4f0+cPIS4m7B+3zoqglADY64Sn9G8VZp48pZy89ZpgcP9GiaF0B7613+B/JZgUJ9iRQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\IreneBindang\\source\\repos\\MIS421FinalProject\\MIS421FinalProjectGit\\MIS421FinalProjectGit\\MIS421FinalProjectGit.csproj",
+  "projectFilePath": "C:\\Users\\IreneBindang\\Source\\Repos\\MIS421FinalProject\\MIS421FinalProjectGit\\MIS421FinalProjectGit\\MIS421FinalProjectGit.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\IreneBindang\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\IreneBindang\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

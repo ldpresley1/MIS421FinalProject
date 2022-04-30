@@ -3,11 +3,26 @@
 @{
     ViewData["Title"] = "Budgets";
 }
+<head>
+    <script src="https://kit.fontawesome.com/bc8d2b84e8.js" crossorigin="anonymous"></script>
+</head>
 
-<h1>Index</h1>
+
+<div class="wrapper">
+    <div class="balance-container">
+    <div class="balance-title">
+        <h3>Balance</h3>
+        <div id="balance-amount">
+            <h1>$      ---</h1>
+        </div>
+        <div class="budget-add"><a asp-action="Create" class="budget-add"><i class='fas fa-plus fa-stack-1x fa-'>Budget</i></a></div>
+    </div>
+
+</div>
+
 
 <p>
-    <a asp-action="Create">Create New</a>
+    
 </p>
 <table class="table">
     <thead>
@@ -51,3 +66,6 @@
 }
     </tbody>
 </table>
+
+
+</div>

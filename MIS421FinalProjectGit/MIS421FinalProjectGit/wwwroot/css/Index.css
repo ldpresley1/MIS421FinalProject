@@ -273,3 +273,30 @@ img {
     cursor:pointer;
     padding:calc(var(--border) + var(--gap));
 }
+.balance-container{
+    background-color:cadetblue;
+    color:bisque;
+    border-radius:50px;
+    margin-bottom:55px;
+    margin-left:85px;
+    margin-right:85px;
+}
+.balance-title {
+    padding: 35px;
+    color: bisque;
+}
+.table {
+  
+}
+.budget-add {
+    color: bisque;
+    font-size: 20px;
+    margin-left: 125px;
+}
+#balance-amount {
+    font-size: 20px;
+    color: bisque;
+}
+.wrapper {
+    
+}
