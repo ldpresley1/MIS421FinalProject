@@ -310,3 +310,7 @@ img {
 #budget-clicks{
     color:antiquewhite;
 }
+.budget-month {
+    text-align: center;
+    padding:35px;
+}
