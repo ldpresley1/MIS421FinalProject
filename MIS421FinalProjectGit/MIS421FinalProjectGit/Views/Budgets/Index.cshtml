@@ -24,9 +24,10 @@
 <p>
     
 </p>
-<table class="table">
+<div id="the-Investments">
+    <table class="table-clear">
     <thead>
-        <tr>
+        <tr id="budget-clicks">
             <th>
                 @Html.DisplayNameFor(model => model.BugetItem)
             </th>
@@ -44,7 +45,7 @@
     </thead>
     <tbody>
 @foreach (var item in Model) {
-        <tr>
+        <tr id="budget-clicks">
             <td>
                 @Html.DisplayFor(modelItem => item.BugetItem)
             </td>
@@ -58,14 +59,16 @@
                 @Html.DisplayFor(modelItem => item.UserAccountID)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.BudgetID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.BudgetID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.BudgetID">Delete</a>
+                <a asp-action="Edit" id="budget-clicks" asp-route-id="@item.BudgetID">Edit</a> |
+                <a asp-action="Details" id="budget-clicks"asp-route-id="@item.BudgetID">Details</a> |
+                <a asp-action="Delete" id="budget-clicks" asp-route-id="@item.BudgetID">Delete</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+</div>
+
 
 
 </div>
