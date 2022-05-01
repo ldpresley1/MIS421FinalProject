@@ -9,16 +9,17 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     
     <link rel="stylesheet" href="~/MIS421FinalProjectGit/wwwroot/lib/bootstrap/dist/js/bootstrap.js" asp-append-version="true" />
+    <script src="https://kit.fontawesome.com/bc8d2b84e8.js" crossorigin="anonymous"></script>
 
 </head>
 
 
 <body>
     @*<header>*@
-        <div class="bg-dark p-4">
+        <div class="bg-dark p-4" style="position: sticky;  top:0;  z-index: 100">
       <ul class="nav nav-white nav-pills">
         <li class="nav-item">
-          <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+          <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="Index"><i class="fa fa-home"></i>Home</a>
         </li>
    
         <partial name="_LoginPartial" />
@@ -29,7 +30,7 @@
   @*  </header>*@
 
 
-<div class="text-center font-size-4 shadow-primary-lg bg-primary text-white p-6 mb-7">@ViewData["Title"]</div>
+<div class="text-center font-size-4 shadow-primary-lg bg-primary text-white p-6 mb-7" style="opacity:0.7;" >@ViewData["Title"]</div>
     
       
     <div class="container">
@@ -45,54 +46,49 @@
                 <div class="d-flex flex-wrap align-items-center pt-5 pb-3d border-gray-4100">
                     <ul class="list-unstyled mx-n3 mb-0 d-flex flex-wrap align-items-center">
                         <li class="px-3">
-                            <a href="#" class="text-gray-1300 d-flex flex-wrap align-items-center"><i class="fab fa-facebook-f fa-inverse"></i> <span class="ml-2">Facebook</span></a>
+                            <a href="https://www.facebook.com/NerdWallet" class="text-gray-1300 d-flex flex-wrap align-items-center"><i class="fab fa-facebook-f fa-inverse"></i> <span class="ml-2">Facebook</span></a>
                         </li>
                         <li class="px-3">
-                            <a href="#" class="text-gray-1300 d-flex flex-wrap align-items-center"><i class="fab fa-twitter fa-inverse"></i> <span class="ml-2">Twitter</span></a>
+                            <a href="https://twitter.com/NerdWallet" class="text-gray-1300 d-flex flex-wrap align-items-center"><i class="fab fa-twitter fa-inverse"></i> <span class="ml-2">Twitter</span></a>
                         </li>
                         <li class="px-3">
-                            <a href="#" class="text-gray-1300 d-flex flex-wrap align-items-center"><i class="fab fa-google-plus-g fa-inverse"></i> <span class="ml-2">Google+</span></a>
+                            <a href="https://www.instagram.com/accounts/login/?next=/nerdwallet/" class="text-gray-1300 d-flex flex-wrap align-items-center"><i class="fab fa-instagram fa-inverse"></i> <span class="ml-2">Instagram</span></a>
                         </li>
-                        <li class="px-3">
-                            <a href="#" class="text-gray-1300 d-flex flex-wrap align-items-center"><i class="fab fa-vimeo-v fa-inverse"></i> <span class="ml-2">Vimeo</span></a>
-                        </li>
-                        <li class="px-3">
-                            <a href="#" class="text-gray-1300 d-flex flex-wrap align-items-center"><i class="fas fa-rss fa-inverse"></i> <span class="ml-2">RSS</span></a>
-                        </li>
+                       
                     </ul>
                 </div>
                  
                      <div class="row pb-1">
                     <div class="col-md mb-5 mb-md-0">
-                        <h4 class="font-size-18 font-weight-medium mb-2 text-gray-4200">Our services</h4>
+                        <h4 class="font-size-18 font-weight-medium mb-2 text-gray-4200"  style="margin-left:45px ">Our services</h4>
                         <ul class="column-count-2 v2 list-unstyled mb-0">
                             <li class="py-1d">
-                                <a class="h-g-white" href="Bills">Bills</a>
+                                <a class="h-g-white" href="Bills" style="margin-left:45px ">Bills</a>
                             </li>
                             <li class="py-1d">
-                                <a class="h-g-white" href="Investments">Investment</a>
+                                <a class="h-g-white" href="Investments"  style="margin-left:45px ">Investment</a>
                             </li>
                             <li class="py-1d">
-                                <a class="h-g-white" href="Transactions">Transactions</a>
+                                <a class="h-g-white" href="Transactions"  style="margin-left:45px ">Transactions</a>
                             </li>
                             <li class="py-1d">
-                                <a class="h-g-white" href="Budgets">Budget Management</a>
+                                <a class="h-g-white" href="Budgets"  style="margin-left:45px">Budget Management</a>
                             </li>
                         </ul>
                     </div>
                    
                     <div class="col-md-2 mb-1 mb-md-0 border-left border-gray-4100">
                         <div class="ml-1">
-                            <h4 class="font-size-18 font-weight-medium mb-2 text-gray-4200">About BudgetBuddy</h4>
+                            <h4 class="font-size-18 font-weight-medium mb-2 text-gray-4200"  style="margin-right:45px ">About BudgetBuddy</h4>
                             <ul class="list-unstyled mb-0">
                                 <li class="py-1d">
-                                    <a class="h-g-white" href="../static/contact.html">About Us</a>
+                                    <a class="h-g-white" href="Home" style="margin-right:45px">About Us</a>
                                 </li>
                                 <li class="py-1d">
-                                    <a class="h-g-white" href="../static/contact.html">Careers at CompanyName</a>
+                                    <a class="h-g-white" href="Home" style="margin-right:45px">Careers at CompanyName</a>
                                 </li>
                                 <li class="py-1d">
-                                    <a class="h-g-white" href="../static/contact.html">Corporate Responsibility</a>
+                                    <a class="h-g-white" href="Home" style="margin-right:45px">Corporate Responsibility</a>
                                 </li>
                             </ul>
                         </div>

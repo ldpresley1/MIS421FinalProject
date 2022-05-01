@@ -3,7 +3,7 @@
 body {
     font-family: Arial;
     margin: 0;
-    background-color:gainsboro;
+    background-color: #E8EAE3;
 }
 
 * {
@@ -18,12 +18,26 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    
+   
 }
 
 /* Position the image container (needed to position the left and right arrows) */
-.container {
+.container-slides {
     position: relative;
+    margin-left: 85px;
+    margin-right: 85px;
+    background-color: lightslategray;
+    margin-top: 85px;
+    margin-left: 85px;
+    margin-right: 85px;
+    margin-bottom: 100px;
+    background-color: cadetblue;
+    border-radius: 50px;
+    opacity: 0.7;
+    padding: 45px;
 }
+
 
 /* Hide the images by default */
 .mySlides {
@@ -38,6 +52,7 @@ img {
 /* Next & previous buttons */
 .prev,
 .next {
+    background-color:antiquewhite;
     cursor: pointer;
     position: absolute;
     top: 40%;
@@ -52,11 +67,11 @@ img {
     -webkit-user-select: none;
 }
 .prev {
-    left: 125px;
+    left: 130px;
 }
 /* Position the "next button" to the right */
 .next {
-    right: 150px;
+    right: 130px;
     border-radius: 3px 0 0 3px;
 }
 
@@ -70,7 +85,7 @@ img {
 /* Number text (1/3 etc) */
 .numbertext {
     color: #f2f2f2;
-    font-size: 12px;
+    font-size: 25px;
     padding: 8px 12px;
     position: absolute;
     top: 0;
@@ -84,7 +99,9 @@ img {
     padding: 2px 16px;
     color: white;
     width: 85%;
-    margin-left:7.5%;
+    margin-left: 7.5%;
+    font-size: 30px;
+    font-weight:400;
 }
 
 .row:after {
@@ -92,7 +109,10 @@ img {
     display: table;
     clear: both;
 }
-
+.row {
+    margin-left: 76px;
+    margin-right: 76px;
+}
 /* Six columns side by side */
 .column {
     float: left;
@@ -101,19 +121,21 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding:  0px 1px ;
+    padding: 0px 1px;
 }
 
 /* Add a transparency effect for thumnbail images */
-.demo {
-    opacity: 0.6;
+.demo  {
+    opacity: 0.5;
 }
+    .demo cursor-t{
+        margin:0 0 0 0;
+    }
 
-.active,
-  .demo:hover {
+    .active,
+    .demo:hover {
         opacity: 1;
- 
-}
+    }
 #stock-ticker {
     padding: 10px;
     margin-right: 45px;
@@ -144,13 +166,14 @@ img {
     display: flex;
     width: 100%;
 
-    padding: 10px;
+    padding: 55px;
     margin-left: 45px;
     margin-bottom: 0;
     margin-top: 25px;
 }
 .crypto{
-    padding:85px 5px;
+    padding:185px;
+    margin-right:51%;
 }
 .nav-item-left {
     margin-right: 1%;
@@ -160,4 +183,134 @@ img {
 .nav-item-investment {
     margin-right: auto;
 }
+#myInvestments {
+    margin-top: 85px;
+    margin-left: 85px;
+    margin-right: 85px;
+    margin-bottom: 100px;
+    background-color:cadetblue;
+    border-radius: 50px;
+    opacity: 0.7;
+    padding: 45px;
+    color:aliceblue;
+}
 
+#myInvestments-insider {
+    padding: 15px 15px;
+    margin-bottom: 85px;
+}
+.table-clear {
+    color: black;
+    width: 100%;
+    padding: 55px 55px 55px;
+    
+    
+}
+.the btn-primary btn-pill{
+    color: antiquewhite;
+}
+.add-investment {
+    background-color: inherit;
+    margin-top: 45px;
+    border-radius: 35%;
+    float: left;
+    border:none;
+}
+#investment-instruments-container {
+    margin-top:65px;
+    margin-bottom:45px;
+}
+.btn btn-primary btn-pill-last{
+    margin-top: 100px;
+    margin-bottom:75px;
+}
+.home-conteiner {
+    background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fcity&psig=AOvVaw2XA_qjz9UWRcfcPHLjFZCZ&ust=1651260082769000&source=images&cd=vfe&ved=0CAkQjRxqFwoTCICJ3ai9t_cCFQAAAAAdAAAAABAU);
+   
+}
+#home-paragraph{
+    color:gainsboro;
+    padding:35px;
+}
+#about-dysplay {
+    color: aliceblue;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 15%;
+    text-align: center;
+    text-align: justify;
+    padding: 35px 5px 35px 35px;
+}
+#about-container {
+    margin-left: 5%;
+    color: aliceblue;
+    margin-top: 105px;
+    padding: 5px;
+}
+.extra-content {
+    background-color: slategrey;
+    width: 60%;
+    text-align: center;
+    display: block;
+    position: relative;
+    border-radius: 50px;
+    opacity: 0.7;
+    align-items: center;
+    margin-left: 20%;
+}
+#the-body {
+    background-image: url(https://media.istockphoto.com/photos/smart-city-and-abstract-dot-point-connect-with-gradient-line-picture-id1203720647?k=20&m=1203720647&s=612x612&w=0&h=MWpNrTup0fDRKkGI2GlKbXKp8UqSufJBV2iD92fIOIk=);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+    height: 500%;
+    width: 100%;
+    height: 100%;
+    z-index: 1;   
+}
+#calculator-home{
+    cursor:pointer;
+    padding:calc(var(--border) + var(--gap));
+}
+.balance-container {
+    background-color: #FF8C00;
+    color: bisque;
+    border-radius: 30px;
+    margin-bottom: 55px;
+    margin-left: 85px;
+    margin-right: 85px;
+    opacity: 0.8;
+}
+.balance-title {
+    padding: 35px;
+    color: bisque;
+}
+
+.budget-add {
+    color: bisque;
+    font-size: 20px;
+    margin-left: 125px;
+}
+#balance-amount {
+    font-size: 20px;
+    color: bisque;
+}
+#the-Investments {
+    margin-top: 5px;
+    margin-left: 85px;
+    margin-right: 85px;
+    margin-bottom: 100px;
+    background-color: #5F9EA0;
+    opacity: 0.7;
+    padding: 45px;
+    color: aliceblue;
+    border-radius: 10px;
+}
+#budget-clicks{
+    color:antiquewhite;
+}
+.budget-month {
+    text-align: center;
+    padding:35px;
+}
