@@ -25,7 +25,9 @@ namespace MIS421FinalProjectGit.Views
         // GET: Bills
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Bill.ToListAsync());
+            var data = _context.Bill.AsQueryable();
+            data = data.Where(x => x.UserAccountID == Guid.Parse(User.Identity.GetUserId()));
+            return View(data);
         }
 
         // GET: Bills/Details/5
@@ -61,7 +63,7 @@ namespace MIS421FinalProjectGit.Views
         {
             if (ModelState.IsValid)
             {
-
+                bill.UserAccountID = Guid.Parse(User.Identity.GetUserId());
                 bill.BillID = Guid.NewGuid();
                 _context.Add(bill);
                 await _context.SaveChangesAsync();

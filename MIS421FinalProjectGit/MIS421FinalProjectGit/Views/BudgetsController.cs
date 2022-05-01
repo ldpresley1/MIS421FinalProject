@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNet.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -23,7 +24,9 @@ namespace MIS421FinalProjectGit.Views
         // GET: Budgets
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Budget.ToListAsync());
+            var data = _context.Budget.AsQueryable();
+            data = data.Where(x => x.UserAccountID == Guid.Parse(User.Identity.GetUserId()));
+            return View(data);
         }
 
         // GET: Budgets/Details/5
@@ -59,6 +62,7 @@ namespace MIS421FinalProjectGit.Views
         {
             if (ModelState.IsValid)
             {
+                budget.UserAccountID = Guid.Parse(User.Identity.GetUserId());
                 budget.BudgetID = Guid.NewGuid();
                 _context.Add(budget);
                 await _context.SaveChangesAsync();

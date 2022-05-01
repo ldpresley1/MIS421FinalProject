@@ -15,8 +15,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\lilyd\source\repos\MIS421FinalProject\MIS421FinalProjectGit\MIS421FinalProjectGit
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Areas/Identity/Pages/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/lilyd/source/repos/MIS421FinalProject/MIS421FinalProjectGit/MIS421FinalProjectGit/Areas/Identity/Pages/Account/Register.cshtml]

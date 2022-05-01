@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNet.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -23,7 +24,9 @@ namespace MIS421FinalProjectGit.Views
         // GET: Transactions
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Transactions.ToListAsync());
+            var data = _context.Transactions.AsQueryable();
+            data = data.Where(x => x.UserAccountID == Guid.Parse(User.Identity.GetUserId()));
+            return View(data);
         }
 
         // GET: Transactions/Details/5
@@ -59,6 +62,7 @@ namespace MIS421FinalProjectGit.Views
         {
             if (ModelState.IsValid)
             {
+                transaction.UserAccountID = Guid.Parse(User.Identity.GetUserId());
                 transaction.TransactionID = Guid.NewGuid();
                 _context.Add(transaction);
                 await _context.SaveChangesAsync();

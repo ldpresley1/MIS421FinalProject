@@ -13,7 +13,7 @@ namespace MIS421FinalProjectGit.Models
 
 
         [Required]
-        public int UserAccountID { get; set; }
+        public Guid UserAccountID { get; set; }
         [ForeignKey("ID")]
         public UserAccount? UserAccount { get; set; }
 

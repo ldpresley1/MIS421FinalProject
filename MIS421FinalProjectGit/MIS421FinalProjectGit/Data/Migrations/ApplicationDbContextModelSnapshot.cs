@@ -276,8 +276,8 @@ namespace MIS421FinalProjectGit.Data.Migrations
                     b.Property<Guid?>("ID")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("UserAccountID")
-                        .HasColumnType("int");
+                    b.Property<Guid>("UserAccountID")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("BillID");
 
@@ -305,8 +305,8 @@ namespace MIS421FinalProjectGit.Data.Migrations
                     b.Property<Guid?>("ID")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("UserAccountID")
-                        .HasColumnType("int");
+                    b.Property<Guid>("UserAccountID")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("BudgetID");
 
@@ -337,8 +337,8 @@ namespace MIS421FinalProjectGit.Data.Migrations
                     b.Property<int>("RiskLevel")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserAccountID")
-                        .HasColumnType("int");
+                    b.Property<Guid>("UserAccountID")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("BillID");
 
@@ -353,6 +353,9 @@ namespace MIS421FinalProjectGit.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<double>("Amount")
+                        .HasColumnType("float");
+
                     b.Property<Guid?>("ID")
                         .HasColumnType("uniqueidentifier");
 
@@ -363,8 +366,8 @@ namespace MIS421FinalProjectGit.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("UserAccountID")
-                        .HasColumnType("int");
+                    b.Property<Guid>("UserAccountID")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("comments")
                         .HasColumnType("nvarchar(max)");
