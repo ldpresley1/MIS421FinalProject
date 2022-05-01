@@ -127,35 +127,6 @@ namespace MIS421FinalProjectGit.Areas.Identity.Pages.Account
 
 
             /// <summary>
-            /// back end for acquirng user's first name
-            /// </summary>
-            [Required]
-            [Display(Name = "FirstName")]
-            public string FirstName { get; set; }
-
-            /// <summary>
-            /// back end for acquirng user's last name
-            /// </summary>
-            [Required]
-            [Display(Name = "LastName")]
-            public string LastName { get; set; }
-
-            /// <summary>
-            /// back end for acquirng user's date of birth
-            /// </summary>
-            [Required]
-            [Display(Name = "DateOfBirth")]
-            public string DateOfBirth { get; set; }
-
-            /// <summary>
-            /// back end for acquirng user's phone number 
-            /// </summary>
-            [Required]
-            [Display(Name = "PhoneNumber")]
-            public string PhoneNumber { get; set; }
-
-
-            /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
