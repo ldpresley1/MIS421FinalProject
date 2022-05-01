@@ -18,28 +18,32 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
+using MIS421FinalProjectGit.Models;
 
 namespace MIS421FinalProjectGit.Areas.Identity.Pages.Account
 {
     public class RegisterModel : PageModel
     {
-        private readonly SignInManager<IdentityUser> _signInManager;
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly IUserStore<IdentityUser> _userStore;
-        private readonly IUserEmailStore<IdentityUser> _emailStore;
+        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly IUserStore<ApplicationUser> _userStore;
+        private readonly IUserEmailStore<ApplicationUser> _emailStore;
+        //private readonly IUserPhoneNumberStore<ApplicationUser> _phoneNumberStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
 
         public RegisterModel(
-            UserManager<IdentityUser> userManager,
-            IUserStore<IdentityUser> userStore,
-            SignInManager<IdentityUser> signInManager,
+            UserManager<ApplicationUser> userManager,
+            IUserStore<ApplicationUser> userStore,
+            SignInManager<ApplicationUser> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
             _userManager = userManager;
             _userStore = userStore;
             _emailStore = GetEmailStore();
+            //_phoneNumberStore= Get
+   
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
@@ -51,6 +55,8 @@ namespace MIS421FinalProjectGit.Areas.Identity.Pages.Account
         /// </summary>
         [BindProperty]
         public InputModel Input { get; set; }
+
+
 
         /// <summary>
         ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
@@ -78,6 +84,47 @@ namespace MIS421FinalProjectGit.Areas.Identity.Pages.Account
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
+
+     
+
+            /// <summary>
+            /// back end for acquirng user's first name
+            /// </summary>
+            [Required]
+            [Display(Name = "FirstName")]
+            public string FirstName { get; set; }
+
+            /// <summary>
+            /// back end for acquirng user's last name
+            /// </summary>
+            [Required]
+            [Display(Name = "LastName")]
+            public string LastName { get; set; }
+
+            /// <summary>
+            /// back end for acquirng user's address
+            /// </summary>
+            [Required]
+            [Display(Name = "Address")]
+            public string Address { get; set; }
+
+            /// <summary>
+            /// back end for acquirng user's date of birth
+            /// </summary>
+            [Required]
+            [Display(Name = "DateOfBirth")]
+            public string DateOfBirth { get; set; }
+
+            /// <summary>
+            /// back end for acquirng user's phone number 
+            /// </summary>
+           
+            [Required(ErrorMessage = "You must provide a phone number")]
+            [Display(Name = "PhoneNumber")]
+            [DataType(DataType.PhoneNumber)]
+            [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid phone number")]
+            public string PhoneNumber { get; set; }
+
 
             /// <summary>
             /// back end for acquirng user's first name
@@ -143,8 +190,18 @@ namespace MIS421FinalProjectGit.Areas.Identity.Pages.Account
             {
                 var user = CreateUser();
 
+                user.FirstName = Input.FirstName;
+                user.LastName = Input.LastName;
+                user.Address = Input.Address;
+                user.PhoneNumber = Input.PhoneNumber;
+                user.DateOfBirth = Input.DateOfBirth;
+                
+
+
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
+                //await _phoneNumberStore.SetPhoneNumberAsync(user, Input.PhoneNumber, CancellationToken.None);
+              
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
@@ -183,27 +240,29 @@ namespace MIS421FinalProjectGit.Areas.Identity.Pages.Account
             return Page();
         }
 
-        private IdentityUser CreateUser()
+        private ApplicationUser CreateUser()
         {
             try
             {
-                return Activator.CreateInstance<IdentityUser>();
+                return Activator.CreateInstance<ApplicationUser>();
             }
             catch
             {
-                throw new InvalidOperationException($"Can't create an instance of '{nameof(IdentityUser)}'. " +
-                    $"Ensure that '{nameof(IdentityUser)}' is not an abstract class and has a parameterless constructor, or alternatively " +
+                throw new InvalidOperationException($"Can't create an instance of '{nameof(ApplicationUser)}'. " +
+                    $"Ensure that '{nameof(ApplicationUser)}' is not an abstract class and has a parameterless constructor, or alternatively " +
                     $"override the register page in /Areas/Identity/Pages/Account/Register.cshtml");
             }
         }
 
-        private IUserEmailStore<IdentityUser> GetEmailStore()
+        private IUserEmailStore<ApplicationUser> GetEmailStore()
         {
             if (!_userManager.SupportsUserEmail)
             {
                 throw new NotSupportedException("The default UI requires a user store with email support.");
             }
-            return (IUserEmailStore<IdentityUser>)_userStore;
+            return (IUserEmailStore<ApplicationUser>)_userStore;
         }
+
+
     }
 }
