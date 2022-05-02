@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MIS421FinalProjectGit.Data;
+using MIS421FinalProjectGit.Interfaces;
 using MIS421FinalProjectGit.Models;
+using MIS421FinalProjectGit.Repositories;
 using StudentApp.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,6 +22,8 @@ builder.Services.AddScoped<IDbInitializer, DbInitializer>();
 
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+ 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
