@@ -140,9 +140,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.RiskLevel)
             </th>
-             <th>
-                @Html.DisplayNameFor(model => model.BillID)
-            </th>
         </tr>
     </thead>
     <tbody>
@@ -160,15 +157,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.RiskLevel)
             </td>
-            
-            <td>
-                @Html.DisplayFor(modelItem => item.BillID)
-            </td>
-           
             <td id="botton-container">
-                <a asp-action="Edit" asp-route-id="@item.BillID" style="color:white">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.BillID" style="color:white">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.BillID" style="color:white">Delete</a>
+               <button type="button" class="btn btn-primary btn-pill"><a style="color:white" asp-action="Edit" asp-route-id="@item.BillID">Edit</a> </button>
+                <button type="button" class="btn btn-primary btn-pill"><a style="color:white" asp-action="Delete" asp-route-id="@item.BillID">Delete</a></button>
             </td>
         </tr>
 }
