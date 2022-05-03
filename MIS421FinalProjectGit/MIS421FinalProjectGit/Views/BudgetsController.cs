@@ -24,8 +24,10 @@ namespace MIS421FinalProjectGit.Views
         // GET: Budgets
         public async Task<IActionResult> Index()
         {
+ 
+
             var data = _context.Budget.AsQueryable();
-            data = data.Where(x => x.UserAccountID == Guid.Parse(User.Identity.GetUserId()));
+            data = data.Where(x => x.ApplicationUserID == Guid.Parse(User.Identity.GetUserId()));
             return View(data);
         }
 
@@ -58,11 +60,11 @@ namespace MIS421FinalProjectGit.Views
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("BudgetID,BugetItem,Amount,Description,UserAccountID")] Budget budget)
+        public async Task<IActionResult> Create([Bind("BudgetID,BugetItem,Amount,Description,ApplicationUserID")] Budget budget)
         {
             if (ModelState.IsValid)
             {
-                budget.UserAccountID = Guid.Parse(User.Identity.GetUserId());
+                budget.ApplicationUserID = Guid.Parse(User.Identity.GetUserId());
                 budget.BudgetID = Guid.NewGuid();
                 _context.Add(budget);
                 await _context.SaveChangesAsync();
@@ -92,7 +94,7 @@ namespace MIS421FinalProjectGit.Views
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("BudgetID,BugetItem,Amount,Description,UserAccountID")] Budget budget)
+        public async Task<IActionResult> Edit(Guid id, [Bind("BudgetID,BugetItem,Amount,Description,ApplicationUserID")] Budget budget)
         {
             if (id != budget.BudgetID)
             {
