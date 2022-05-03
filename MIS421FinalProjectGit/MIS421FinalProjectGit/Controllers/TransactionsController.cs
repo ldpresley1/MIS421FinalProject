@@ -25,7 +25,7 @@ namespace MIS421FinalProjectGit.Views
         public async Task<IActionResult> Index()
         {
             var data = _context.Transactions.AsQueryable();
-            data = data.Where(x => x.UserAccountID == Guid.Parse(User.Identity.GetUserId()));
+            data = data.Where(x => x.ApplicationUserID == Guid.Parse(User.Identity.GetUserId()));
             return View(data);
         }
 
@@ -62,8 +62,7 @@ namespace MIS421FinalProjectGit.Views
         {
             if (ModelState.IsValid)
             {
-                
-                transaction.UserAccountID = Guid.Parse(User.Identity.GetUserId());
+                transaction.ApplicationUserID = Guid.Parse(User.Identity.GetUserId());
                 transaction.TransactionID = Guid.NewGuid();
                 _context.Add(transaction);
                 await _context.SaveChangesAsync();
