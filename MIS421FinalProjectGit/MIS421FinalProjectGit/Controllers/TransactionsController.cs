@@ -62,6 +62,7 @@ namespace MIS421FinalProjectGit.Views
         {
             if (ModelState.IsValid)
             {
+                
                 transaction.UserAccountID = Guid.Parse(User.Identity.GetUserId());
                 transaction.TransactionID = Guid.NewGuid();
                 _context.Add(transaction);
