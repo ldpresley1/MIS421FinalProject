@@ -18,7 +18,7 @@ namespace MIS421FinalProjectGit.Data
             //Added ina  attempt to use ApplicationUser
            // builder.ApplyConfiguration(new ApplicationUserEntityConfiguration());
         }
-        public DbSet<MIS421FinalProjectGit.Models.UserAccount> UserAccount { get; set; }
+        //public DbSet<MIS421FinalProjectGit.Models.UserAccount> UserAccount { get; set; }
         public DbSet<MIS421FinalProjectGit.Models.Bill> Bill { get; set; }
         public DbSet<MIS421FinalProjectGit.Models.Transaction> Transactions { get; set; }
         public DbSet<MIS421FinalProjectGit.Models.Budget> Budget { get; set; }
