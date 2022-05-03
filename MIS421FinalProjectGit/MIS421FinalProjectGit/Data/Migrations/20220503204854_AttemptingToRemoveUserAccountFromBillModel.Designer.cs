@@ -4,6 +4,7 @@ using MIS421FinalProjectGit.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MIS421FinalProjectGit.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220503204854_AttemptingToRemoveUserAccountFromBillModel")]
+    partial class AttemptingToRemoveUserAccountFromBillModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -275,9 +277,6 @@ namespace MIS421FinalProjectGit.Data.Migrations
                     b.Property<double>("Amount")
                         .HasColumnType("float");
 
-                    b.Property<Guid>("ApplicationUserID")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("BugetItem")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -285,8 +284,11 @@ namespace MIS421FinalProjectGit.Data.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ID")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<Guid?>("ID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("UserAccountID")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("BudgetID");
 
@@ -470,20 +472,20 @@ namespace MIS421FinalProjectGit.Data.Migrations
 
             modelBuilder.Entity("MIS421FinalProjectGit.Models.Bill", b =>
                 {
-                    b.HasOne("MIS421FinalProjectGit.Models.ApplicationUser", "ApplicationUser")
+                    b.HasOne("MIS421FinalProjectGit.Models.ApplicationUser", "UserAccount")
                         .WithMany()
                         .HasForeignKey("ID");
 
-                    b.Navigation("ApplicationUser");
+                    b.Navigation("UserAccount");
                 });
 
             modelBuilder.Entity("MIS421FinalProjectGit.Models.Budget", b =>
                 {
-                    b.HasOne("MIS421FinalProjectGit.Models.ApplicationUser", "ApplicationUser")
+                    b.HasOne("MIS421FinalProjectGit.Models.UserAccount", "UserAccount")
                         .WithMany()
                         .HasForeignKey("ID");
 
-                    b.Navigation("ApplicationUser");
+                    b.Navigation("UserAccount");
                 });
 
             modelBuilder.Entity("MIS421FinalProjectGit.Models.Investments", b =>

@@ -39,7 +39,7 @@
                 @Html.DisplayNameFor(model => model.Description)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.UserAccountID)
+                @Html.DisplayNameFor(model => model.ApplicationUserID)
             </th>
             <th></th>
         </tr>
@@ -57,7 +57,7 @@
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.UserAccountID)
+                @Html.DisplayFor(modelItem => item.ApplicationUserID)
             </td>
             <td>
                 <a asp-action="Edit" id="budget-clicks" asp-route-id="@item.BudgetID">Edit</a> |
