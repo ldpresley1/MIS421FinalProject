@@ -13,9 +13,9 @@ namespace MIS421FinalProjectGit.Models
         public int RiskLevel { get; set; }
 
         [Required]
-        public Guid UserAccountID { get; set; }
+        public Guid ApplicationUserID { get; set; }
         [ForeignKey("ID")]
-        public UserAccount? UserAccount { get; set; }
+        public ApplicationUser? ApplicationUser { get; set; }
 
         [DataType(DataType.Upload)]
         [DisplayName("Investment Image")]
