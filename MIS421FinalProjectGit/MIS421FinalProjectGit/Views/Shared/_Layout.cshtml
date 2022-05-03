@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using StudentApp.Data
+<!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -32,17 +33,27 @@
         </li>*@
 
         <li class="nav-item">
-          <a class="nav-link disabled" href="Bills">Bills</a>
+          <a class="nav-link" href="Bills">Bills</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="Budgets">Budgets</a>
+          <a class="nav-link" href="Budgets">Budgets</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="Transactions">Transactions</a>
+          <a class="nav-link" href="Transactions">Transactions</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="Investments">Investments</a>
+          <a class="nav-link" href="Investments">Investments</a>
         </li>
+
+        @if (User.IsInRole(SD.Admin))
+            {
+                <li class="nav-item">
+                    <a class="nav-link" href="UserRoles">Users</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="RoleManager">Manage Roles</a>
+                </li>
+              }
       </ul>
     </div>
   @*  </header>*@
