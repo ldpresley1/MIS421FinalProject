@@ -22,7 +22,7 @@ namespace MIS421FinalProjectGit.Data
         public DbSet<MIS421FinalProjectGit.Models.Bill> Bill { get; set; }
         public DbSet<MIS421FinalProjectGit.Models.Transaction> Transactions { get; set; }
         public DbSet<MIS421FinalProjectGit.Models.Budget> Budget { get; set; }
-        public DbSet<MIS421FinalProjectGit.Models.AdminAccounts> AdminAccount { get; set; }
+       // public DbSet<MIS421FinalProjectGit.Models.AdminAccounts> AdminAccount { get; set; }
         public DbSet<MIS421FinalProjectGit.Models.Investments> Investments { get; set; }
 
         public DbSet<MIS421FinalProjectGit.Models.ApplicationUser> ApplicationUsers { get; set; }
