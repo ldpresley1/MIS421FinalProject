@@ -84,7 +84,7 @@ namespace MIS421FinalProjectGit.Views
             {
                 return NotFound();
             }
-
+          
             var investments = await _context.Investments.FindAsync(id);
             if (investments == null)
             {
@@ -109,6 +109,7 @@ namespace MIS421FinalProjectGit.Views
             {
                 try
                 {
+                    investments.ApplicationUserID = Guid.Parse(User.Identity.GetUserId());
                     _context.Update(investments);
                     await _context.SaveChangesAsync();
                 }

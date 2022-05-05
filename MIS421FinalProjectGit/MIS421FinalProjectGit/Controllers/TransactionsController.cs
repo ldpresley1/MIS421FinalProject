@@ -103,6 +103,7 @@ namespace MIS421FinalProjectGit.Views
             {
                 try
                 {
+                    transaction.ApplicationUserID = Guid.Parse(User.Identity.GetUserId());
                     _context.Update(transaction);
                     await _context.SaveChangesAsync();
                 }
