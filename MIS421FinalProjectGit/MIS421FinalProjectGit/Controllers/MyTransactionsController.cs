@@ -3,34 +3,33 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNet.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MIS421FinalProjectGit.Data;
 using MIS421FinalProjectGit.Models;
-using Microsoft.AspNet.Identity; // NuGet: Microsoft ASP.NET Identity Core.
-using System.Security.Principal;
 
 namespace MIS421FinalProjectGit.Views
 {
-    public class BillsController : Controller
+    public class TransactionsController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public BillsController(ApplicationDbContext context)
+        public TransactionsController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: Bills
+        // GET: Transactions
         public async Task<IActionResult> Index()
         {
-            var data = _context.Bill.AsQueryable();
+            var data = _context.MyTransaction.AsQueryable();
             data = data.Where(x => x.ApplicationUserID == Guid.Parse(User.Identity.GetUserId()));
             return View(data);
         }
 
-        // GET: Bills/Details/5
+        // GET: Transactions/Details/5
         public async Task<IActionResult> Details(Guid? id)
         {
             if (id == null)
@@ -38,41 +37,41 @@ namespace MIS421FinalProjectGit.Views
                 return NotFound();
             }
 
-            var bill = await _context.Bill
-                .FirstOrDefaultAsync(m => m.BillID == id);
-            if (bill == null)
+            var transaction = await _context.MyTransaction
+                .FirstOrDefaultAsync(m => m.TransactionID == id);
+            if (transaction == null)
             {
                 return NotFound();
             }
 
-            return View(bill);
+            return View(transaction);
         }
 
-        // GET: Bills/Create
+        // GET: Transactions/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Bills/Create
+        // POST: Transactions/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("BillID,BillType,DueDate,Amount,DayPaid,Description,UserAccountID")] Bill bill)
+        public async Task<IActionResult> Create([Bind("TransactionID,TransType,TransCategory,Amount,comments,UserAccountID")] MyTransaction transaction)
         {
             if (ModelState.IsValid)
             {
-                bill.ApplicationUserID= Guid.Parse(User.Identity.GetUserId());
-                bill.BillID = Guid.NewGuid();
-                _context.Add(bill);
+                transaction.ApplicationUserID = Guid.Parse(User.Identity.GetUserId());
+                transaction.TransactionID = Guid.NewGuid();
+                _context.Add(transaction);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(bill);
+            return View(transaction);
         }
 
-        // GET: Bills/Edit/5
+        // GET: Transactions/Edit/5
         public async Task<IActionResult> Edit(Guid? id)
         {
             if (id == null)
@@ -80,22 +79,22 @@ namespace MIS421FinalProjectGit.Views
                 return NotFound();
             }
 
-            var bill = await _context.Bill.FindAsync(id);
-            if (bill == null)
+            var transaction = await _context.MyTransaction.FindAsync(id);
+            if (transaction == null)
             {
                 return NotFound();
             }
-            return View(bill);
+            return View(transaction);
         }
 
-        // POST: Bills/Edit/5
+        // POST: Transactions/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("BillID,BillType,DueDate,Amount,DayPaid,Description,UserAccountID")] Bill bill)
+        public async Task<IActionResult> Edit(Guid id, [Bind("TransactionID,TransType,TransCategory,Amount,comments,UserAccountID")] MyTransaction transaction)
         {
-            if (id != bill.BillID)
+            if (id != transaction.TransactionID)
             {
                 return NotFound();
             }
@@ -104,12 +103,12 @@ namespace MIS421FinalProjectGit.Views
             {
                 try
                 {
-                    _context.Update(bill);
+                    _context.Update(transaction);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!BillExists(bill.BillID))
+                    if (!TransactionExists(transaction.TransactionID))
                     {
                         return NotFound();
                     }
@@ -120,10 +119,10 @@ namespace MIS421FinalProjectGit.Views
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(bill);
+            return View(transaction);
         }
 
-        // GET: Bills/Delete/5
+        // GET: Transactions/Delete/5
         public async Task<IActionResult> Delete(Guid? id)
         {
             if (id == null)
@@ -131,30 +130,32 @@ namespace MIS421FinalProjectGit.Views
                 return NotFound();
             }
 
-            var bill = await _context.Bill
-                .FirstOrDefaultAsync(m => m.BillID == id);
-            if (bill == null)
+            var transaction = await _context.MyTransaction
+                .FirstOrDefaultAsync(m => m.TransactionID == id);
+            if (transaction == null)
             {
                 return NotFound();
             }
 
-            return View(bill);
+            return View(transaction);
         }
 
-        // POST: Bills/Delete/5
+        // POST: Transactions/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
-            var bill = await _context.Bill.FindAsync(id);
-            _context.Bill.Remove(bill);
+            var transaction = await _context.MyTransaction.FindAsync(id);
+            _context.MyTransaction.Remove(transaction);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool BillExists(Guid id)
+        private bool TransactionExists(Guid id)
         {
-            return _context.Bill.Any(e => e.BillID == id);
+            return _context.MyTransaction.Any(e => e.TransactionID == id);
         }
     }
 }
+
+

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MIS421FinalProjectGit.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220503204854_AttemptingToRemoveUserAccountFromBillModel")]
-    partial class AttemptingToRemoveUserAccountFromBillModel
+    [Migration("20220505110504_AddeddMyTransactionModel")]
+    partial class AddeddMyTransactionModel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -232,7 +232,68 @@ namespace MIS421FinalProjectGit.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("MIS421FinalProjectGit.Models.Bill", b =>
+            modelBuilder.Entity("MIS421FinalProjectGit.Models.Budget", b =>
+                {
+                    b.Property<Guid>("BudgetID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<double>("Amount")
+                        .HasColumnType("float");
+
+                    b.Property<Guid>("ApplicationUserID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("BugetItem")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ID")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("BudgetID");
+
+                    b.HasIndex("ID");
+
+                    b.ToTable("Budget");
+                });
+
+            modelBuilder.Entity("MIS421FinalProjectGit.Models.Investments", b =>
+                {
+                    b.Property<Guid>("BillID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ApplicationUserID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ID")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<byte[]>("InvestmentImage")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("InvestmentType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("RiskLevel")
+                        .HasColumnType("int");
+
+                    b.HasKey("BillID");
+
+                    b.HasIndex("ID");
+
+                    b.ToTable("Investments");
+                });
+
+            modelBuilder.Entity("MIS421FinalProjectGit.Models.MyBill", b =>
                 {
                     b.Property<Guid>("BillID")
                         .ValueGeneratedOnAdd()
@@ -252,7 +313,6 @@ namespace MIS421FinalProjectGit.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("DueDate")
@@ -265,71 +325,10 @@ namespace MIS421FinalProjectGit.Data.Migrations
 
                     b.HasIndex("ID");
 
-                    b.ToTable("Bill");
+                    b.ToTable("MyBill");
                 });
 
-            modelBuilder.Entity("MIS421FinalProjectGit.Models.Budget", b =>
-                {
-                    b.Property<Guid>("BudgetID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<double>("Amount")
-                        .HasColumnType("float");
-
-                    b.Property<string>("BugetItem")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid?>("ID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("UserAccountID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("BudgetID");
-
-                    b.HasIndex("ID");
-
-                    b.ToTable("Budget");
-                });
-
-            modelBuilder.Entity("MIS421FinalProjectGit.Models.Investments", b =>
-                {
-                    b.Property<Guid>("BillID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid?>("ID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<byte[]>("InvestmentImage")
-                        .HasColumnType("varbinary(max)");
-
-                    b.Property<string>("InvestmentType")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("RiskLevel")
-                        .HasColumnType("int");
-
-                    b.Property<Guid>("UserAccountID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("BillID");
-
-                    b.HasIndex("ID");
-
-                    b.ToTable("Investments");
-                });
-
-            modelBuilder.Entity("MIS421FinalProjectGit.Models.Transaction", b =>
+            modelBuilder.Entity("MIS421FinalProjectGit.Models.MyTransaction", b =>
                 {
                     b.Property<Guid>("TransactionID")
                         .ValueGeneratedOnAdd()
@@ -338,8 +337,11 @@ namespace MIS421FinalProjectGit.Data.Migrations
                     b.Property<double>("Amount")
                         .HasColumnType("float");
 
-                    b.Property<Guid?>("ID")
+                    b.Property<Guid>("ApplicationUserID")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ID")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("TransCategory")
                         .HasColumnType("nvarchar(max)");
@@ -348,9 +350,6 @@ namespace MIS421FinalProjectGit.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("UserAccountID")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("comments")
                         .HasColumnType("nvarchar(max)");
 
@@ -358,40 +357,7 @@ namespace MIS421FinalProjectGit.Data.Migrations
 
                     b.HasIndex("ID");
 
-                    b.ToTable("Transactions");
-                });
-
-            modelBuilder.Entity("MIS421FinalProjectGit.Models.UserAccount", b =>
-                {
-                    b.Property<Guid>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Address")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("LastLogin")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("UserAccountType")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("UserAccount");
+                    b.ToTable("MyTransaction");
                 });
 
             modelBuilder.Entity("MIS421FinalProjectGit.Models.ApplicationUser", b =>
@@ -470,40 +436,40 @@ namespace MIS421FinalProjectGit.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("MIS421FinalProjectGit.Models.Bill", b =>
-                {
-                    b.HasOne("MIS421FinalProjectGit.Models.ApplicationUser", "UserAccount")
-                        .WithMany()
-                        .HasForeignKey("ID");
-
-                    b.Navigation("UserAccount");
-                });
-
             modelBuilder.Entity("MIS421FinalProjectGit.Models.Budget", b =>
                 {
-                    b.HasOne("MIS421FinalProjectGit.Models.UserAccount", "UserAccount")
+                    b.HasOne("MIS421FinalProjectGit.Models.ApplicationUser", "ApplicationUser")
                         .WithMany()
                         .HasForeignKey("ID");
 
-                    b.Navigation("UserAccount");
+                    b.Navigation("ApplicationUser");
                 });
 
             modelBuilder.Entity("MIS421FinalProjectGit.Models.Investments", b =>
                 {
-                    b.HasOne("MIS421FinalProjectGit.Models.UserAccount", "UserAccount")
+                    b.HasOne("MIS421FinalProjectGit.Models.ApplicationUser", "ApplicationUser")
                         .WithMany()
                         .HasForeignKey("ID");
 
-                    b.Navigation("UserAccount");
+                    b.Navigation("ApplicationUser");
                 });
 
-            modelBuilder.Entity("MIS421FinalProjectGit.Models.Transaction", b =>
+            modelBuilder.Entity("MIS421FinalProjectGit.Models.MyBill", b =>
                 {
-                    b.HasOne("MIS421FinalProjectGit.Models.UserAccount", "UserAccount")
+                    b.HasOne("MIS421FinalProjectGit.Models.ApplicationUser", "ApplicationUser")
                         .WithMany()
                         .HasForeignKey("ID");
 
-                    b.Navigation("UserAccount");
+                    b.Navigation("ApplicationUser");
+                });
+
+            modelBuilder.Entity("MIS421FinalProjectGit.Models.MyTransaction", b =>
+                {
+                    b.HasOne("MIS421FinalProjectGit.Models.ApplicationUser", "ApplicationUser")
+                        .WithMany()
+                        .HasForeignKey("ID");
+
+                    b.Navigation("ApplicationUser");
                 });
 #pragma warning restore 612, 618
         }

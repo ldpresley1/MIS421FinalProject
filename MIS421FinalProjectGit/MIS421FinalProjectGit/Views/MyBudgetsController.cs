@@ -24,9 +24,9 @@ namespace MIS421FinalProjectGit.Views
         // GET: Budgets
         public async Task<IActionResult> Index()
         {
- 
 
-            var data = _context.Budget.AsQueryable();
+
+            var data = _context.MyBudget.AsQueryable();
             data = data.Where(x => x.ApplicationUserID == Guid.Parse(User.Identity.GetUserId()));
             return View(data);
         }
@@ -39,7 +39,7 @@ namespace MIS421FinalProjectGit.Views
                 return NotFound();
             }
 
-            var budget = await _context.Budget
+            var budget = await _context.MyBudget
                 .FirstOrDefaultAsync(m => m.BudgetID == id);
             if (budget == null)
             {
@@ -60,7 +60,7 @@ namespace MIS421FinalProjectGit.Views
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("BudgetID,BugetItem,Amount,Description")] Budget budget)
+        public async Task<IActionResult> Create([Bind("BudgetID,BugetItem,Amount,Description")] MyBudget budget)
         {
             if (ModelState.IsValid)
             {
@@ -81,7 +81,7 @@ namespace MIS421FinalProjectGit.Views
                 return NotFound();
             }
 
-            var budget = await _context.Budget.FindAsync(id);
+            var budget = await _context.MyBudget.FindAsync(id);
             if (budget == null)
             {
                 return NotFound();
@@ -94,7 +94,7 @@ namespace MIS421FinalProjectGit.Views
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("BudgetID,BugetItem,Amount,Description,")] Budget budget)
+        public async Task<IActionResult> Edit(Guid id, [Bind("BudgetID,BugetItem,Amount,Description,")] MyBudget budget)
         {
             if (id != budget.BudgetID)
             {
@@ -132,7 +132,7 @@ namespace MIS421FinalProjectGit.Views
                 return NotFound();
             }
 
-            var budget = await _context.Budget
+            var budget = await _context.MyBudget
                 .FirstOrDefaultAsync(m => m.BudgetID == id);
             if (budget == null)
             {
@@ -147,15 +147,18 @@ namespace MIS421FinalProjectGit.Views
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
-            var budget = await _context.Budget.FindAsync(id);
-            _context.Budget.Remove(budget);
+            var budget = await _context.MyBudget.FindAsync(id);
+            _context.MyBudget.Remove(budget);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool BudgetExists(Guid id)
         {
-            return _context.Budget.Any(e => e.BudgetID == id);
+            return _context.MyBudget.Any(e => e.BudgetID == id);
         }
     }
 }
+
+
+
