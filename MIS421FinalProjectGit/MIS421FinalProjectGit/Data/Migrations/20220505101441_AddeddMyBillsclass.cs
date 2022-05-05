@@ -5,12 +5,14 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MIS421FinalProjectGit.Data.Migrations
 {
-    public partial class AddedBillModel : Migration
+    public partial class AddeddMyBillsclass : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            
+
             migrationBuilder.CreateTable(
-                name: "Bill",
+                name: "MyBill",
                 columns: table => new
                 {
                     BillID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -18,30 +20,32 @@ namespace MIS421FinalProjectGit.Data.Migrations
                     DueDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Amount = table.Column<double>(type: "float", nullable: false),
                     DayPaid = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    UserAccountID = table.Column<int>(type: "int", nullable: false),
-                    ID = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ApplicationUserID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    ID = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Bill", x => x.BillID);
+                    table.PrimaryKey("PK_MyBill", x => x.BillID);
                     table.ForeignKey(
-                        name: "FK_Bill_UserAccount_ID",
+                        name: "FK_MyBill_AspNetUsers_ID",
                         column: x => x.ID,
-                        principalTable: "UserAccount",
-                        principalColumn: "ID");
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Bill_ID",
-                table: "Bill",
+                name: "IX_MyBill_ID",
+                table: "MyBill",
                 column: "ID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Bill");
+                name: "MyBill");
+
+           
         }
     }
 }

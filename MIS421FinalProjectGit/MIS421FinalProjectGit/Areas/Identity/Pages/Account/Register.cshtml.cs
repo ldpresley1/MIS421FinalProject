@@ -166,6 +166,7 @@ namespace MIS421FinalProjectGit.Areas.Identity.Pages.Account
                 user.Address = Input.Address;
                 user.PhoneNumber = Input.PhoneNumber;
                 user.DateOfBirth = Input.DateOfBirth;
+                user.LastLogin = DateTime.Now;
                 
 
 

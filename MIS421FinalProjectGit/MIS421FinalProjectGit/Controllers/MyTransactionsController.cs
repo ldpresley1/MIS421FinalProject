@@ -24,7 +24,7 @@ namespace MIS421FinalProjectGit.Views
         // GET: Transactions
         public async Task<IActionResult> Index()
         {
-            var data = _context.Transactions.AsQueryable();
+            var data = _context.MyTransaction.AsQueryable();
             data = data.Where(x => x.ApplicationUserID == Guid.Parse(User.Identity.GetUserId()));
             return View(data);
         }
@@ -37,7 +37,7 @@ namespace MIS421FinalProjectGit.Views
                 return NotFound();
             }
 
-            var transaction = await _context.Transactions
+            var transaction = await _context.MyTransaction
                 .FirstOrDefaultAsync(m => m.TransactionID == id);
             if (transaction == null)
             {
@@ -58,7 +58,7 @@ namespace MIS421FinalProjectGit.Views
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("TransactionID,TransType,TransCategory,Amount,comments,UserAccountID")] Transaction transaction)
+        public async Task<IActionResult> Create([Bind("TransactionID,TransType,TransCategory,Amount,comments,UserAccountID")] MyTransaction transaction)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace MIS421FinalProjectGit.Views
                 return NotFound();
             }
 
-            var transaction = await _context.Transactions.FindAsync(id);
+            var transaction = await _context.MyTransaction.FindAsync(id);
             if (transaction == null)
             {
                 return NotFound();
@@ -92,7 +92,7 @@ namespace MIS421FinalProjectGit.Views
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("TransactionID,TransType,TransCategory,Amount,comments,UserAccountID")] Transaction transaction)
+        public async Task<IActionResult> Edit(Guid id, [Bind("TransactionID,TransType,TransCategory,Amount,comments,UserAccountID")] MyTransaction transaction)
         {
             if (id != transaction.TransactionID)
             {
@@ -131,7 +131,7 @@ namespace MIS421FinalProjectGit.Views
                 return NotFound();
             }
 
-            var transaction = await _context.Transactions
+            var transaction = await _context.MyTransaction
                 .FirstOrDefaultAsync(m => m.TransactionID == id);
             if (transaction == null)
             {
@@ -146,15 +146,17 @@ namespace MIS421FinalProjectGit.Views
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
-            var transaction = await _context.Transactions.FindAsync(id);
-            _context.Transactions.Remove(transaction);
+            var transaction = await _context.MyTransaction.FindAsync(id);
+            _context.MyTransaction.Remove(transaction);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool TransactionExists(Guid id)
         {
-            return _context.Transactions.Any(e => e.TransactionID == id);
+            return _context.MyTransaction.Any(e => e.TransactionID == id);
         }
     }
 }
+
+

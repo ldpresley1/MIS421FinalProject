@@ -19,14 +19,25 @@ namespace MIS421FinalProjectGit.Data
            // builder.ApplyConfiguration(new ApplicationUserEntityConfiguration());
         }
         //public DbSet<MIS421FinalProjectGit.Models.UserAccount> UserAccount { get; set; }
-        public DbSet<MIS421FinalProjectGit.Models.Bill> Bill { get; set; }
-        public DbSet<MIS421FinalProjectGit.Models.Transaction> Transactions { get; set; }
-        public DbSet<MIS421FinalProjectGit.Models.Budget> Budget { get; set; }
+        //public DbSet<MIS421FinalProjectGit.Models.Bill> Bill { get; set; }
+        //public DbSet<MIS421FinalProjectGit.Models.Transaction> Transactions { get; set; }
+        //public DbSet<MIS421FinalProjectGit.Models.Budget> Budget { get; set; }
 
        // public DbSet<MIS421FinalProjectGit.Models.AdminAccounts> AdminAccount { get; set; }
         public DbSet<MIS421FinalProjectGit.Models.Investments> Investments { get; set; }
 
         public DbSet<MIS421FinalProjectGit.Models.ApplicationUser> ApplicationUsers { get; set; }
+
+        public DbSet<MIS421FinalProjectGit.Models.MyBill> MyBill { get; set; }
+
+        public DbSet<MIS421FinalProjectGit.Models.MyTransaction> MyTransaction { get; set; }
+
+        public DbSet<MIS421FinalProjectGit.Models.MyBudget> MyBudget { get; set; }
+
+       
+
+
+        
 
         //Added in an attempt to use ApplicationUser
         //public class ApplicationUserEntityConfiguration : IEntityTypeConfiguration<ApplicationUser>
