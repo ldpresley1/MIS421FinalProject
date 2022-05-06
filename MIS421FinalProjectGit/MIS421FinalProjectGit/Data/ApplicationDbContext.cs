@@ -32,7 +32,8 @@ namespace MIS421FinalProjectGit.Data
 
         public DbSet<MIS421FinalProjectGit.Models.MyTransaction> MyTransaction { get; set; }
 
-        public DbSet<MIS421FinalProjectGit.Models.MyBudget> MyBudget { get; set; }
+        public DbSet<MIS421FinalProjectGit.Models.BudgetViewModel> BudgetViewModel { get; set; }
+
 
        
 
