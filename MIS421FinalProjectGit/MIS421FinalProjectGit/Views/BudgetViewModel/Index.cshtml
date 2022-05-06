@@ -45,13 +45,7 @@
                 @Html.DisplayNameFor(model => model.Balance)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.LeftoverEarnings)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.initialBalance)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ApplicationUserID)
             </th>
             <th></th>
         </tr>
@@ -63,13 +57,7 @@
                 @Html.DisplayFor(modelItem => item.Balance)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.LeftoverEarnings)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.initialBalance)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ApplicationUserID)
             </td>
             <td>
                  <button type="button" class="btn btn-primary btn-pill"><a style="color:white" asp-action="Edit" asp-route-id="@item.BudgetID">Edit</a></button> |

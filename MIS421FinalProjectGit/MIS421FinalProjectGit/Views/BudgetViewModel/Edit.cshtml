@@ -14,24 +14,9 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="BudgetID" />
             <div class="form-group">
-                <label asp-for="Balance" class="control-label"></label>
-                <input asp-for="Balance" class="form-control" />
-                <span asp-validation-for="Balance" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="LeftoverEarnings" class="control-label"></label>
-                <input asp-for="LeftoverEarnings" class="form-control" />
-                <span asp-validation-for="LeftoverEarnings" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="initialBalance" class="control-label"></label>
                 <input asp-for="initialBalance" class="form-control" />
                 <span asp-validation-for="initialBalance" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ApplicationUserID" class="control-label"></label>
-                <input asp-for="ApplicationUserID" class="form-control" />
-                <span asp-validation-for="ApplicationUserID" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
