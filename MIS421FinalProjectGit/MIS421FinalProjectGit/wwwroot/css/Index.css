@@ -178,6 +178,7 @@ img {
 .crypto{
     padding:185px;
     margin-right:51%;
+   
 }
 #nav-item-left {
     margin-right: 1%;
@@ -189,6 +190,14 @@ img {
 }
 .budget-month{
     border-bottom:thin;
+}
+.lillian {
+    background-color: inherit;
+    margin-top: 85px;
+    margin-left: 85px;
+    margin-right: 85px;
+    margin-bottom: 100px;
+    padding: 45px;
 }
 
 #myInvestments {
@@ -215,12 +224,8 @@ img {
     font-weight: 600;
     font-size: 18px;
 }
-}
 
-#myInvestments-insider {
-    padding: 15px 15px;
-    margin-bottom: 85px;
-}
+
 
 .the btn-primary btn-pill{
     color: antiquewhite;
@@ -285,9 +290,10 @@ img {
     height: 100%;
     z-index: 1;   
 }
-#calculator-home{
-    cursor:pointer;
-    padding:calc(var(--border) + var(--gap));
+
+#calculator-home {
+    cursor: pointer;
+    padding: calc(var(--border) + var(--gap));
 }
 .balance-container {
     background-color: #FF8C00;

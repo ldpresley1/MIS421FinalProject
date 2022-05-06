@@ -9,6 +9,11 @@
 
  <link rel="stylesheet" href="~/css/Index.css" asp-append-version="true" />
 
+ 
+ 
+ 
+
+
 @if (SignInManager.IsSignedIn(User))
 {
 
@@ -53,4 +58,5 @@ else
         <a class="nav-link" asp-area="Identity" asp-page="/Account/Login">Login</a>
     </li>
 }
+
 
