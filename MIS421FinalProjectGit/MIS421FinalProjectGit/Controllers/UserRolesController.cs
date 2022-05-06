@@ -42,7 +42,7 @@ namespace MIS421FinalProjectGit.Controllers
             return new List<string>(await _userManager.GetRolesAsync(user));
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = SD.Admin)]
         public async Task<IActionResult> Manage(string userId)
         {
             ViewBag.userId = userId;
@@ -74,7 +74,7 @@ namespace MIS421FinalProjectGit.Controllers
             return View(model);
         }
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = SD.Admin)]
         public async Task<IActionResult> Manage(List<ManageUserRolesViewModel> model, string userId)
         {
             var user = await _userManager.FindByIdAsync(userId);
@@ -97,5 +97,45 @@ namespace MIS421FinalProjectGit.Controllers
             }
             return RedirectToAction("Index");
         }
+
+        [Authorize(Roles = SD.Admin)]
+        public async Task<IActionResult> ActiveUsers()
+        {
+
+            var users = await _userManager.Users.ToListAsync();
+            var userRolesViewModel = new List<UserRolesViewModel>();
+
+            //string debuggingEmail= null;
+
+            foreach (ApplicationUser user in users)
+            {
+                TimeSpan interval =  DateTime.Now- user.LastLogin;
+                if (interval.TotalDays <= 7)
+                {
+                    var thisViewModel = new UserRolesViewModel();
+
+                        //debuggingEmail = thisViewModel.Email;
+
+                    thisViewModel.UserId = user.Id;
+                    thisViewModel.Email = user.Email;
+                    thisViewModel.FirstName = user.FirstName;
+                    thisViewModel.LastName = user.LastName;
+                    thisViewModel.Roles = await GetUserRoles(user);
+                    thisViewModel.LastLogin = user.LastLogin;
+                    userRolesViewModel.Add(thisViewModel);
+                    
+                }
+
+                //var debuggingEmail2 = debuggingEmail;
+                //bool testingStuff = (interval.TotalDays <= 7);
+                //var a="debugging";
+
+
+            }
+
+            return View(userRolesViewModel);
+        }
+
+
     }
 }
