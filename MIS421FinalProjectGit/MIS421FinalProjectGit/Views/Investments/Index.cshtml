@@ -12,9 +12,9 @@
 </head>
 <body>
 
+    <dive id="investment-wrapper">
 
-   
-    <div class="container-stock-ticker">
+        <div class="container-stock-ticker">
          
          <div id="crypto"><i class='fab fa-bitcoin fa-spin fa-3x' style="color:#10316b"></i>Bitcoin  |
          <p id="bitcoin-ticker">----</p> 
@@ -124,12 +124,22 @@
   </div>
 </div>
 
- <div id="myInvestments">
-     <h1  style="text-align:center" id="myInvestments-insider"><b>My Investments</b></h1>
 
-     <table class="table table-info">
+
+    </dive>
+
+
+   
+    
+
+ <h1  style="text-align:center" id="myInvestments-insider"><b>My Investments</b></h1>
+
+ <div id="myInvestments">
+    
+
+     <table class="table table-info" >
     <thead>
-        <tr id="try">
+        <tr id="try" >
             
             <th>
                 @Html.DisplayNameFor(model => model.InvestmentType)
