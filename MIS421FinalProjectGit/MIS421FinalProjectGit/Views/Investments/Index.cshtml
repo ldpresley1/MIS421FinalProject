@@ -127,9 +127,9 @@
  <div id="myInvestments">
      <h1  style="text-align:center" id="myInvestments-insider"><b>My Investments</b></h1>
 
-     <table class="table-clear">
+     <table class="table table-info">
     <thead>
-        <tr>
+        <tr id="try">
             
             <th>
                 @Html.DisplayNameFor(model => model.InvestmentType)
@@ -157,8 +157,8 @@
             <td>
                 @Html.DisplayFor(modelItem => item.RiskLevel)
             </td>
-            <td id="botton-container">
-               <button type="button" class="btn btn-primary btn-pill"><a style="color:white" asp-action="Edit" asp-route-id="@item.BillID">Edit</a> </button>
+            <td >
+                <button type="button" class="btn btn-primary btn-pill"><a style="color:white" asp-action="Edit" asp-route-id="@item.BillID">Edit</a> </button> |
                 <button type="button" class="btn btn-primary btn-pill"><a style="color:white" asp-action="Delete" asp-route-id="@item.BillID">Delete</a></button>
             </td>
         </tr>
@@ -166,9 +166,12 @@
     </tbody>
 </table>
 
-<button type="button" class="btn btn-primary btn-pill-last">
-    <a style="color:white" asp-action="Create">Add Investment</a>
-</button>
+<p  class="">
+    <span class='fa-stack fa-lg' id="add-budget" style="color:darkorange">
+        <i class='fas fa-circle fa-stack-2x'></i>
+        <i class='fas fa-plus fa-stack-1x fa-inverse'></i>
+    </span><a style="color:white" asp-action="Create">Add Investment</a>
+</p>
 
 
  </div>

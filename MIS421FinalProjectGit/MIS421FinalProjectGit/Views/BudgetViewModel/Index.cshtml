@@ -4,12 +4,29 @@
     ViewData["Title"] = "Budgets";
 }
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
+
+
+
+<h1 class="budget-month">This Month</h1>
+
+<div class="budget-add">
+    <p>
+    <a asp-action="Create"><span class='fa-stack fa-lg' id="add-budget" style="color:darkorange">
+        <i class='fas fa-circle fa-stack-2x'></i>
+        <i class='fas fa-plus fa-stack-1x fa-inverse'></i>
+    </span>Add Balance</a>
+    </p>
+
+</div>
+
+
+
+<div id="myInvestments">
+
+
+    <table class="table table-info">
+    <thead >
+        <tr id="try" >
             <th>
                 @Html.DisplayNameFor(model => model.Balance)
             </th>
@@ -41,11 +58,14 @@
                 @Html.DisplayFor(modelItem => item.ApplicationUserID)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.BudgetID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.BudgetID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.BudgetID">Delete</a>
+                 <button type="button" class="btn btn-primary btn-pill"><a style="color:white" asp-action="Edit" asp-route-id="@item.BudgetID">Edit</a></button> |
+                 <button type="button" class="btn btn-primary btn-pill"><a style="color:white" asp-action="Details" asp-route-id="@item.BudgetID">Details</a></button> |
+                 <button type="button" class="btn btn-primary btn-pill"><a style="color:white" asp-action="Delete" asp-route-id="@item.BudgetID">Delete</a></button>
             </td>
         </tr>
 }
     </tbody>
 </table>
+
+</div>
+

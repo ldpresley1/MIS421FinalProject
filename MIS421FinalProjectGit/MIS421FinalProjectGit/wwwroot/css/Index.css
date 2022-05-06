@@ -166,46 +166,62 @@ img {
     display: flex;
     width: 100%;
 
-    padding: 55px;
+    padding: 25px;
     margin-left: 45px;
     margin-bottom: 0;
     margin-top: 25px;
+    border-bottom:inset;
+    border-block-color:darkgrey;
+    
+   
 }
 .crypto{
     padding:185px;
     margin-right:51%;
 }
-.nav-item-left {
+#nav-item-left {
     margin-right: 1%;
     background-color:cadetblue;
     border-radius:10%;
 }
-.nav-item-investment {
+#nav-item-investment {
     margin-right: auto;
 }
+.budget-month{
+    border-bottom:thin;
+}
+
 #myInvestments {
-    margin-top: 85px;
+    margin-top: 15px;
     margin-left: 85px;
     margin-right: 85px;
     margin-bottom: 100px;
-    background-color:cadetblue;
-    border-radius: 50px;
+    background-color: cadetblue;
+    border-radius: 35px;
     opacity: 0.7;
     padding: 45px;
-    color:aliceblue;
+    color: white;
+}
+.table-clear {
+    color: white;
+    width: 100%;
+    padding: 100px;
+    background-color: inherit;
+    font-size:16px;
+}
+#try {
+    background-color: #e8630a;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+}
 }
 
 #myInvestments-insider {
     padding: 15px 15px;
     margin-bottom: 85px;
 }
-.table-clear {
-    color: black;
-    width: 100%;
-    padding: 55px 55px 55px;
-    
-    
-}
+
 .the btn-primary btn-pill{
     color: antiquewhite;
 }
@@ -217,7 +233,7 @@ img {
     border:none;
 }
 #investment-instruments-container {
-    margin-top:65px;
+    margin-top:55px;
     margin-bottom:45px;
 }
 .btn btn-primary btn-pill-last{
