@@ -1,0 +1,36 @@
+﻿@model List<UserRolesViewModel>
+@{
+    ViewData["Title"] = "ActiveUsers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*+		userRolesViewModel	Count = 17	System.Collections.Generic.List<MIS421FinalProjectGit.Models.UserRolesViewModel>*@
+
+<h1>Active users</h1>
+
+<label>Total Number of Active users:</label>@Model.Count()<br>
+
+@*<label>Percent of register users who are active:</label> (@Model.Count()/ )<br>*@
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Roles</th>
+            <th>LastLogIn</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+        <tr>
+            <td>@user.FirstName</td>
+            <td>@user.LastName</td>
+            <td>@user.Email</td>
+            <td>@string.Join(" , ", user.Roles.ToList())</td>
+            <td>@user.LastLogin</td>
+        </tr>
+        }
+    </tbody>
+</table>
