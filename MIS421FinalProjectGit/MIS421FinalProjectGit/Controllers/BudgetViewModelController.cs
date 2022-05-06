@@ -166,11 +166,11 @@ namespace MIS421FinalProjectGit.Views
             {
                 if(item.TransType == "Credit")
                 {
-                    budgetViewModel.Balance += item.Amount;
+                    budgetViewModel.Balance -= item.Amount;
                 }
                 else if(item.TransType == "Debit")
                 {
-                    budgetViewModel.Balance -= item.Amount;
+                    budgetViewModel.Balance += item.Amount;
                 }
             }
             var billdata = _context.MyBill.AsQueryable();
