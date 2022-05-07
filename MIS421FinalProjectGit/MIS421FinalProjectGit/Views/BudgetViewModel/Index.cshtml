@@ -23,19 +23,8 @@
 
 <h1 class="budget-month">My Dashboard</h1>
 
-<div class="budget-add">
-    <p>
-    <a asp-action="Create"><span class='fa-stack fa-lg' id="add-budget" style="color:darkorange">
-        <i class='fas fa-circle fa-stack-2x'></i>
-        <i class='fas fa-plus fa-stack-1x fa-inverse'></i>
-    </span>Add Balance</a>
-    </p>
 
-</div>
-
-
-
-<div id="myInvestments">
+<div>
 
 
     <table class="table table-info">
@@ -68,6 +57,9 @@
 }
     </tbody>
 </table>
+<button type="button" class="btn btn-primary btn-pill">
+    <a style="color:white" asp-action="Create">Add Bill</a>
+</button>
 
 </div>
 
