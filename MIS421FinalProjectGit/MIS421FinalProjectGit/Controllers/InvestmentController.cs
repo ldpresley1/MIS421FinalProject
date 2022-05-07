@@ -12,11 +12,11 @@ using MIS421FinalProjectGit.Models;
 
 namespace MIS421FinalProjectGit.Views
 {
-    public class InvestmentsController : Controller
+    public class InvestmentController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public InvestmentsController(ApplicationDbContext context)
+        public InvestmentController(ApplicationDbContext context)
         {
             _context = context;
         }

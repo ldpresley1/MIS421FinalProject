@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "apis1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ApiManagement/service/MIS421FinalProjectGitapi/apis/MIS421FinalProjectGit",
+      "type": "apis.azure"
+    }
+  }
+}
