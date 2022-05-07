@@ -71,6 +71,7 @@ namespace MIS421FinalProjectGit.Views
                 budgetViewModel.BudgetID = Guid.NewGuid();
                 budgetViewModel.Balance = 0;
                 _context.Add(budgetViewModel);
+                await _context.SaveChangesAsync();
                 await getCurrentBalance(budgetViewModel);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
