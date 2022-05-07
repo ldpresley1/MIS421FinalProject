@@ -22,14 +22,15 @@ namespace MIS421FinalProjectGit.Views
         }
 
         // GET: BudgetViewModels
-        public ActionResult Index()
+        public async Task<IActionResult> Index()
         {
             var data = _context.BudgetViewModel.AsQueryable();
             data = data.Where(x => x.ApplicationUserID == Guid.Parse(User.Identity.GetUserId()));
             foreach(BudgetViewModel budget in data)
             {
-                getCurrentBalance(budget);
+                await getCurrentBalance(budget);
             }
+            await _context.SaveChangesAsync();
             return View(data);
         }
 
@@ -70,8 +71,8 @@ namespace MIS421FinalProjectGit.Views
                 budgetViewModel.BudgetID = Guid.NewGuid();
                 budgetViewModel.Balance = 0;
                 _context.Add(budgetViewModel);
+                await getCurrentBalance(budgetViewModel);
                 await _context.SaveChangesAsync();
-                getCurrentBalance(budgetViewModel);
                 return RedirectToAction(nameof(Index));
             }
             return View(budgetViewModel);
@@ -157,7 +158,7 @@ namespace MIS421FinalProjectGit.Views
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-        public ActionResult getCurrentBalance([Bind("BudgetID,Balance,LeftoverEarnings,initialBalance,ApplicationUserID")] BudgetViewModel budgetViewModel)
+        public async Task<IActionResult> getCurrentBalance([Bind("BudgetID,Balance,LeftoverEarnings,initialBalance,ApplicationUserID")] BudgetViewModel budgetViewModel)
         {
             var data = _context.MyTransaction.AsQueryable();
             data = data.Where(x => x.ApplicationUserID == Guid.Parse(User.Identity.GetUserId()));
@@ -181,7 +182,6 @@ namespace MIS421FinalProjectGit.Views
             }
             budgetViewModel.Balance += budgetViewModel.initialBalance;
             _context.Update(budgetViewModel);
-             _context.SaveChangesAsync();
             return View(budgetViewModel);
         }
         private bool BudgetViewModelExists(Guid id)
